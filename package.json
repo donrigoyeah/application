@@ -2,11 +2,9 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://donrigoyeah.github.io/donrigoyeah.github.io",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
-    "predeploy": "npm run build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "deploy": "gh-pages -d out"

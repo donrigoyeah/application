@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  distDir: 'build',
 };
 
 module.exports = nextConfig;
-const withImages = require('next-images');
-module.exports = withImages();
