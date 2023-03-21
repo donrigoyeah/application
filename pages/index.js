@@ -50,7 +50,7 @@ export default function Home() {
     triggerOnce: true,
   });
 
-  const [project, setProject] = useState(5);
+  const [project, setProject] = useState(1);
   const [codeAccepted, setCodeAccepted] = useState(false);
   const [showPage, setShowPage] = useState(false);
   const [screenWidth, setScreenWidth] = useState(0);
@@ -951,7 +951,7 @@ export default function Home() {
               <h2 className='text-6xl whitespace-nowrap overflow-visible font-bold'>
                 {gameProjects[project].title}
               </h2>
-              <p>{gameProjects[project].subtitle}</p>
+              <span>{gameProjects[project].subtitle}</span>
               <h3 className='text-3xl mt-5'>Describtion:</h3>
               <p className=''>{gameProjects[project].describtion}</p>
               <div className='mt-auto mb-5'>
@@ -966,7 +966,7 @@ export default function Home() {
               </h3>
               <h3 className='text-3xl mt-5 flex justify-between'>
                 Duration:
-                <p>{gameProjects[project].duration}</p>
+                <span>{gameProjects[project].duration}</span>
               </h3>
               <h3 className='text-xl text-right pr-20'></h3>
               <h3 className='text-3xl mt-5 flex justify-between whitespace-nowrap'>
@@ -1113,11 +1113,11 @@ const gameProjects = [
     subtitle: '3rd Person Action Adventue',
     describtion: (
       <span className='w-full'>
-        <p>
+        <span>
           From zero to infinity. Since i knew everything after the tutorial, why
           not build a 3D multiplayer dungeon crawler for mobile... So I followed
           the youtuber{' '}
-          <span>
+          <>
             <a
               href='https: //www.youtube.com/playlist?list=PLD_vBJjpCwJtrHIW1SS5_BNRk6KZJZ7_d'
               className='pointer-cursor underline'
@@ -1126,12 +1126,12 @@ const gameProjects = [
             >
               Sebastian Graves{' '}
             </a>
-          </span>
+          </>
           and added the Mirror networking ontop of his very informative
           lectures. With more time on my hand during this year i dove deep and
           got myself lost. Also i learned a lot, this project was way too
           ambitious for me back then and i never finished it.
-        </p>
+        </span>
       </span>
     ),
     goal: 'What can i accomplish?',
@@ -1151,7 +1151,7 @@ const gameProjects = [
     subtitle: '3rd Squirrel Adventure',
     describtion: (
       <span className='w-full'>
-        <p>
+        <span>
           My submission to the{' '}
           <span>
             <a
@@ -1168,7 +1168,7 @@ const gameProjects = [
           made the 3D models and animation with Blender, played some guitar with
           Ableton and put it all together with Unity. Some PostProcessing Layers
           tried to hide the rough edges but it felt great to finish something.
-        </p>
+        </span>
       </span>
     ),
 
@@ -1211,9 +1211,12 @@ const gameProjects = [
     ownRating: 5,
     conclusion:
       'Despite haveing less time, development feels very productive and fullfilling. A project i would love to share with future fellow students.',
-    images: {
-      1: '',
-    },
+    images: [
+      '/assets/images/games/solaris1.png',
+      '/assets/images/games/solaris2.png',
+      '/assets/images/games/solaris3.png',
+      '/assets/images/games/solaris4.png',
+    ],
   },
   {
     title: 'Spirit Mask',
@@ -1224,9 +1227,12 @@ const gameProjects = [
     duration: '-',
     ownRating: 5,
     conclusion: 'Lets Go ...',
-    images: {
-      1: '',
-    },
+    images: [
+      '/assets/images/games/sm1.jpg',
+      '/assets/images/games/sm2.jpg',
+      '/assets/images/games/sm3.jpg',
+      '/assets/images/games/sm4.jpg',
+    ],
   },
 ];
 
