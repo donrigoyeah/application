@@ -104,8 +104,15 @@ export default function Home() {
           </button>
         </form>
         <div className='relative pt-40 text-center text-sm'>
+          <p>
+            Welcome to my portfolio website for the application to the gamelab
+            cologne .
+          </p>
           <p>This website is designed for desktop viewports.</p>
-          <p>For best experience please use a laptop.</p>
+          <p>
+            For best experience please use a laptop width a screen width of at
+            least 1000px.
+          </p>
 
           <p
             className={classNames(' pt-4', {
@@ -117,6 +124,13 @@ export default function Home() {
             {screenWidth &&
               screenWidth < 2000 &&
               'Your screen size is ' + screenWidth + ' px.'}
+          </p>
+          <p
+            className={classNames('pt-20', {
+              'text-transparent': screenWidth < 1000,
+            })}
+          >
+            The code for the page is 1234.
           </p>
         </div>
       </>
@@ -144,12 +158,15 @@ export default function Home() {
             <CodeForm />
           </div>
         )}
-
+        {/* {codeAccepted && ( */}
         <div
-          className={classNames('relative transition-opacity duration-[3s]', {
-            'opacity-0 hidden': !showPage,
-            'opacity-100 visible': showPage,
-          })}
+          className={classNames(
+            'relative transition-opacity duration-[3s] bg-transparent',
+            {
+              'opacity-0 h-0': !showPage,
+              'opacity-100 overflow-y-visible': showPage,
+            }
+          )}
         >
           {/* <div className='absolute rotate-90 h-20 -top-5 z-0 -left-[80%]'>
               <span className='text-6xl decoration-black underline decoration-wavy text-transparent overflow-hidden  '>
@@ -312,7 +329,7 @@ export default function Home() {
               </div>
             </div>
             <div className='col-span-3 bg-secondary h-full rounded-br-2xl pt-10 px-10 flex flex-col'>
-              <h2 className='text-4xl'>Find me</h2>
+              <h2 className='text-4xl font-bold'>Find me</h2>
               <span className='text-2xl h-9 mt-4 hover:text-3xl transition-all duration-500'>
                 <a
                   href='https://www.openstreetmap.org/#map=16/50.9460/6.9522'
@@ -384,19 +401,37 @@ export default function Home() {
                   <table className='w-full r-0'>
                     <thead>
                       <tr className='flex flex-col relative mb-5'>
-                        <td className='text-5xl pb-5'>Education</td>
+                        <td className='text-5xl pb-5 font-bold'>Education</td>
                         <td className='absolute h-0.5 bg-black w-96 block -right-10 bottom-2'></td>
                       </tr>
                     </thead>
                     <tbody>
                       <tr className='text-2xl relative '>
-                        <td className='pr-4'>Student Exchange USA 2006</td>
+                        <td className='pr-4'>
+                          <a
+                            href='https://www.edgerton.k12.oh.us/'
+                            target='_blank'
+                            rel='noreferrer'
+                            className='hover:underline hover:text-fourth'
+                          >
+                            Student Exchange USA 2006
+                          </a>
+                        </td>
                         <td className='absolute -right-10 w-10 h-[2px] top-[40%] bg-black'>
                           &nbsp;
                         </td>
                       </tr>
                       <tr className='text-2xl relative '>
-                        <td className='pr-4'>Abitur 2009</td>
+                        <td className='pr-4'>
+                          <a
+                            href='https://www.gymnasium-leichlingen.de/'
+                            target='_blank'
+                            rel='noreferrer'
+                            className='hover:underline hover:text-fourth'
+                          >
+                            Highschool Diploma 2009
+                          </a>
+                        </td>
                         <td className='absolute -right-10 w-10 h-[2px] top-[40%] bg-black'>
                           &nbsp;
                         </td>
@@ -405,13 +440,31 @@ export default function Home() {
                         <td> &nbsp;</td>
                       </tr>
                       <tr className='text-2xl relative '>
-                        <td className='pr-4'>Intercambio Brazil 2014</td>
+                        <td className='pr-4'>
+                          <a
+                            href='https://www2.unesp.br/'
+                            target='_blank'
+                            rel='noreferrer'
+                            className='hover:underline hover:text-fourth'
+                          >
+                            Intercambio Brazil 2014
+                          </a>
+                        </td>
                         <td className='absolute -right-10 w-10 h-[2px] top-[40%] bg-black'>
                           &nbsp;
                         </td>
                       </tr>
                       <tr className='text-2xl relative '>
-                        <td className='pr-4'>B.Sc. Geology 2015</td>
+                        <td className='pr-4'>
+                          <a
+                            href='https://www.uni-heidelberg.de/de'
+                            target='_blank'
+                            rel='noreferrer'
+                            className='hover:underline hover:text-fourth'
+                          >
+                            B.Sc. Geology 2015
+                          </a>
+                        </td>
                         <td className='absolute -right-10 w-10 h-[2px] top-[40%] bg-black'>
                           &nbsp;
                         </td>
@@ -423,7 +476,16 @@ export default function Home() {
                         <td> &nbsp;</td>
                       </tr>
                       <tr className='text-2xl relative '>
-                        <td className='pr-4'>M.Sc. Geophysics 2019</td>
+                        <td className='pr-4'>
+                          <a
+                            href='https://www.uni-kiel.de/de/'
+                            target='_blank'
+                            rel='noreferrer'
+                            className='hover:underline hover:text-fourth'
+                          >
+                            M.Sc. Geophysics 2019
+                          </a>
+                        </td>
                         <td className='absolute -right-10 w-10 h-[2px] top-[40%] bg-black'>
                           &nbsp;
                         </td>
@@ -458,7 +520,7 @@ export default function Home() {
                   <table className=''>
                     <thead>
                       <tr className='flex flex-col relative mb-5'>
-                        <td className='text-5xl pb-5'>Work</td>
+                        <td className='text-5xl pb-5 font-bold'>Work</td>
                         <td className='absolute h-0.5 bg-black w-96 block -left-10 bottom-2'></td>
                       </tr>
                     </thead>
@@ -473,7 +535,16 @@ export default function Home() {
                         <td className='absolute -left-10 w-10 h-[2px] top-[40%] bg-black'>
                           &nbsp;
                         </td>
-                        <td className='pl-4'>2011 Student trainee</td>
+                        <td className='pl-4'>
+                          <a
+                            href='https://www.topuniversities.com/blog/working-while-you-study-common-student-jobs'
+                            target='_blank'
+                            rel='noreferrer'
+                            className='hover:underline hover:text-secondary'
+                          >
+                            2011 Student Jobs
+                          </a>
+                        </td>
                       </tr>
                       <tr className='text-2xl'>
                         <td> &nbsp;</td>
@@ -485,13 +556,31 @@ export default function Home() {
                         <td className='absolute -left-10 w-10 h-[2px] top-[40%] bg-black'>
                           &nbsp;
                         </td>
-                        <td className='pl-4'>2017 Poker dealer</td>
+                        <td className='pl-4'>
+                          <a
+                            href='https://kiel.casino-sh.de/startseite.html'
+                            target='_blank'
+                            rel='noreferrer'
+                            className='hover:underline hover:text-secondary'
+                          >
+                            2017 Poker Dealer
+                          </a>
+                        </td>
                       </tr>
                       <tr className='text-2xl relative block'>
                         <td className='absolute -left-10 w-10 h-[2px] top-[40%] bg-black'>
                           &nbsp;
                         </td>
-                        <td className='pl-4'>2018 Geologist</td>
+                        <td className='pl-4'>
+                          <a
+                            href='https://gsb.sh/'
+                            target='_blank'
+                            rel='noreferrer'
+                            className='hover:underline hover:text-secondary'
+                          >
+                            2018 Geologist
+                          </a>
+                        </td>
                       </tr>
                       <tr className='text-2xl'>
                         <td> &nbsp;</td>
@@ -500,13 +589,31 @@ export default function Home() {
                         <td className='absolute -left-10 w-10 h-[2px] top-[40%] bg-black'>
                           &nbsp;
                         </td>
-                        <td className='pl-4'>2020 Cook</td>
+                        <td className='pl-4'>
+                          <a
+                            href='https://de.restaurantguru.com/Maria-Bonita-Kiel'
+                            target='_blank'
+                            rel='noreferrer'
+                            className='hover:underline hover:text-secondary'
+                          >
+                            2020 Mexican Food Cook
+                          </a>
+                        </td>
                       </tr>
                       <tr className='text-2xl relative block'>
                         <td className='absolute -left-10 w-10 h-[2px] top-[40%] bg-black'>
                           &nbsp;
                         </td>
-                        <td className='pl-4'>2021 Web dev</td>
+                        <td className='pl-4'>
+                          <a
+                            href='https://networkteam.com/'
+                            target='_blank'
+                            rel='noreferrer'
+                            className='hover:underline hover:text-secondary'
+                          >
+                            2021 Web Developer
+                          </a>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
@@ -551,7 +658,7 @@ export default function Home() {
                       width={50}
                       alt='unity logo'
                     />
-                    <h2 className='text-4xl'>Blender</h2>
+                    <h2 className='text-4xl font-bold'>Blender</h2>
                   </div>
                   <span className='block text-2xl pt-5'>
                     <span className='flex flex-row '>
@@ -592,13 +699,13 @@ export default function Home() {
                       width={50}
                       alt='unity logo'
                     />
-                    <h2 className='text-4xl'>Unity</h2>
+                    <h2 className='text-4xl font-bold'>Unity</h2>
                   </div>
                   <span className='block text-2xl pt-5'>
                     <span className='flex flex-row '>
                       <Plus className='h-7 w-7 inline mr-2 absolute' />
                       <span className='pl-10'>
-                        Sicherer Umgang mit Object Orientiertem Code
+                        Secure handling with object orientated code
                       </span>
                     </span>
                   </span>
@@ -640,7 +747,7 @@ export default function Home() {
                       width={50}
                       alt='c sharp logo'
                     />
-                    <h2 className='text-4xl'>C# / TS </h2>
+                    <h2 className='text-4xl font-bold'>C# / TS </h2>
                   </div>
                   <span className='block text-2xl pt-5'>
                     <span className='flex flex-row '>
@@ -713,7 +820,7 @@ export default function Home() {
                 <a
                   key={index}
                   className={classNames(
-                    'col-span-2 h-20 text-center text-2xl p-6 hover:text-3xl transition-all duration-500 shadow-left',
+                    'col-span-2 h-20 text-center text-2xl p-6 hover:text-3xl transition-all duration-500 shadow-left ',
                     {
                       'shadow-none': index === 0,
                       'bg-fourth ': index === 0 || index === 3,
@@ -841,7 +948,7 @@ export default function Home() {
             )}
           >
             <div className='col-span-4 ml-5 px-4 flex flex-col'>
-              <h2 className='text-6xl whitespace-nowrap overflow-visible'>
+              <h2 className='text-6xl whitespace-nowrap overflow-visible font-bold'>
                 {gameProjects[project].title}
               </h2>
               <p>{gameProjects[project].subtitle}</p>
@@ -862,9 +969,22 @@ export default function Home() {
                 <p>{gameProjects[project].duration}</p>
               </h3>
               <h3 className='text-xl text-right pr-20'></h3>
-              <h3 className='text-3xl mt-5 flex justify-between'>
+              <h3 className='text-3xl mt-5 flex justify-between whitespace-nowrap'>
                 Own Rating:{' '}
-                <StarRating rating={gameProjects[project].ownRating} />
+                <MouseParallaxContainer
+                  className='w-full h-full flex '
+                  containerStyle={{ overflow: 'visible' }}
+                  resetOnLeave
+                >
+                  <MouseParallaxChild
+                    factorX={0.1}
+                    factorY={0.1}
+                    className='absolute right-1/4 top-1/4'
+                    resetOnLeave
+                  >
+                    <StarRating rating={gameProjects[project].ownRating} />
+                  </MouseParallaxChild>
+                </MouseParallaxContainer>
               </h3>
             </div>
             <div className='col-span-4'>
@@ -873,7 +993,7 @@ export default function Home() {
                   <div className='grow min-h-[25%] hover:min-h-[75%] transition-all duration-1000  bg-third'>
                     <div className='relative w-full h-full'>
                       <Image
-                        src='/assets/images/test.jpg'
+                        src={gameProjects[project].images[0]}
                         className='absolute overflow-hidden object-cover'
                         alt='some image'
                         fill
@@ -883,7 +1003,7 @@ export default function Home() {
                   <div className='grow min-h-[25%] hover:min-h-[75%] transition-all duration-1000 bg-fourth '>
                     <div className='relative w-full h-full'>
                       <Image
-                        src='/assets/images/test.jpg'
+                        src={gameProjects[project].images[1]}
                         className='absolute overflow-hidden object-cover'
                         alt='some image'
                         fill
@@ -895,7 +1015,7 @@ export default function Home() {
                   <div className='grow min-h-[25%] hover:min-h-[75%] transition-all duration-1000  bg-primary'>
                     <div className='relative w-full h-full'>
                       <Image
-                        src='/assets/images/test.jpg'
+                        src={gameProjects[project].images[2]}
                         className='absolute overflow-hidden object-cover'
                         alt='some image'
                         fill
@@ -905,7 +1025,7 @@ export default function Home() {
                   <div className='grow min-h-[25%] hover:min-h-[75%] transition-all duration-1000 bg-secondary '>
                     <div className='relative w-full h-full'>
                       <Image
-                        src='/assets/images/test.jpg'
+                        src={gameProjects[project].images[3]}
                         className='absolute overflow-hidden object-cover'
                         alt='some image'
                         fill
@@ -948,6 +1068,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        {/* )} */}
       </main>
     </>
   );
@@ -966,13 +1087,13 @@ const StarRating = ({ rating }) => {
     );
   }
 
-  return <div className='star-rating'>{stars}</div>;
+  return <div className='star-rating transition-all'>{stars}</div>;
 };
 
 const gameProjects = [
   {
     title: 'Galaxy Shooter',
-    subtitle: '2D arcade casual space shooter',
+    subtitle: '2D Arcady / Casual Space Shooter',
     describtion:
       'This game was developed in a Unity Course from Udemy and consists of a fun 2D arcade space shooter with powerups, waves of spawning enemies and levels with increasing difficulty. Implementation of sprite animations and "cool" sound effects',
     goal: 'Learning Unity',
@@ -980,13 +1101,16 @@ const gameProjects = [
     ownRating: 2,
     conclusion:
       'A simple, yet fun casual game that tought me the fundamentals of unity. Lets become a game developer!',
-    images: {
-      1: '',
-    },
+    images: [
+      '/assets/images/games/galaxyshooter1.png',
+      '/assets/images/games/galaxyshooter2.png',
+      '/assets/images/games/galaxyshooter3.png',
+      '/assets/images/games/galaxyshooter4.png',
+    ],
   },
   {
     title: 'Mobile Dungeon',
-    subtitle: '3rd Person action adventue',
+    subtitle: '3rd Person Action Adventue',
     describtion: (
       <span className='w-full'>
         <p>
@@ -1015,13 +1139,16 @@ const gameProjects = [
     ownRating: 2,
     conclusion:
       'Aim high, but not out of reach. The result was a barley working prototyp with many features that i was still feeling kinda proud of it. But also felt like a bottomless pit.',
-    images: {
-      1: '',
-    },
+    images: [
+      '/assets/images/games/mobiledungeon3.png',
+      '/assets/images/games/mobiledungeon1.png',
+      '/assets/images/games/mobiledungeon2.png',
+      '/assets/images/games/mobiledungeon4.png',
+    ],
   },
   {
     title: 'NutExpress',
-    subtitle: '3rd Squirrel casual game',
+    subtitle: '3rd Squirrel Adventure',
     describtion: (
       <span className='w-full'>
         <p>
@@ -1050,13 +1177,16 @@ const gameProjects = [
     ownRating: 3,
     conclusion:
       'Very tense weekend. But it was possible to finish something enjoyable',
-    images: {
-      1: '',
-    },
+    images: [
+      '/assets/images/games/NutExp1.png',
+      '/assets/images/games/NutExp2.png',
+      '/assets/images/games/NutExp3.png',
+      '/assets/images/games/NutExp4.png',
+    ],
   },
   {
     title: 'Spheris',
-    subtitle: 'Spherical tetris in space',
+    subtitle: 'Spherical Space Tetris',
     describtion:
       'A spherical tetris game made with a friend, where the random generated pieces fall from outside onto a sphere. The more points you get, the faster they fall. Includes an intricated gamesystem, a simple visual solution to a tricky challenge and much more. I took a week off work and designed, planed and developed this masterpiece while explaning unity as good as i could to my friend. There are still many rough edges but an enjoyable title nonetheless.',
     goal: 'Developing with a friend and finishing a game',
@@ -1064,9 +1194,12 @@ const gameProjects = [
     ownRating: 4,
     conclusion:
       'Good vibes & good times. The approach to game develpment by an data scientist gave me new perspectives on tackling and overcoming codeing challenges.',
-    images: {
-      1: '',
-    },
+    images: [
+      '/assets/images/games/spheris1.png',
+      '/assets/images/games/spheris2.png',
+      '/assets/images/games/spheris3.png',
+      '/assets/images/games/spheris4.png',
+    ],
   },
   {
     title: 'Solaris',
@@ -1142,10 +1275,10 @@ const ClickGame = () => {
   const handleClick = () => {
     if (!isRunning) {
       setIsRunning(true);
-      setPointSize({ height: 1, width: 1 });
+      setPointSize(startPointSize);
       setMisses(1);
     }
-    if (score >= 1) {
+    if (score >= 5) {
       resetGame();
       setIsRunning(false);
       return;
@@ -1155,6 +1288,10 @@ const ClickGame = () => {
     setCurrentPoint({
       left: Math.floor(Math.random() * 9) * 10 + 10,
       top: Math.floor(Math.random() * 9) * 10 + 10,
+    });
+    setPointSize({
+      height: pointSize.height - 2,
+      width: pointSize.width - 2,
     });
   };
 
@@ -1199,7 +1336,9 @@ const ClickGame = () => {
     <>
       <div className='w-full h-screen bg-fourth flex flex-row items-center pb-20'>
         <div className='flex flex-col w-full h-full'>
-          <h2 className='text-5xl py-12 text-center bg-fourth '>Click Dot</h2>
+          <h2 className='text-5xl py-12 text-center bg-fourth text-primary font-extrabold'>
+            Click Dot
+          </h2>
           <div className='relative h-3/4 w-3/4 bg-primary rounded-3xl mx-auto'>
             <a
               className='w-full h-full z-30 cursor-pointer block transition-all'
@@ -1221,15 +1360,16 @@ const ClickGame = () => {
         </div>
         <div
           className={classNames(
-            'justify-center text-center relative transition-all duration-1000',
+            'justify-center text-center relative transition-all duration-1000 ',
             {
               'w-0 overflow-hidden': scoreLast === 0,
-              'w-80 overflow-visible pr-12': scoreLast !== 0,
+              'w-80 overflow-visible pr-12 bg-primary rounded-2xl p-6 mr-4':
+                scoreLast !== 0,
             }
           )}
         >
-          <table className=' gap-6'>
-            <thead className='border-b border-black gap-6'>
+          <table className=''>
+            <thead className='border-b border-black'>
               <tr>
                 <td className='text-right'></td>
                 <td className='text-center text-2xl px-4 pb-2 '>
@@ -1277,10 +1417,20 @@ const ClickGame = () => {
 };
 
 // allowList
-// h-1
-// w-1
 // h-12
 // w-12
+// h-10
+// w-10
+// h-8
+// w-8
+// h-6
+// w-6
+// h-4
+// w-4
+// h-2
+// w-2
+// h-1
+// w-1
 // left-[10%]
 // left-[20%]
 // left-[30%]
