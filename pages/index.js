@@ -84,7 +84,7 @@ export default function Home() {
       <>
         <form
           onSubmit={handleSubmit}
-          className='grid grid-cols-3 justify-center items-center'
+          className='grid grid-cols-3 justify-center items-center pt-16 md:pt-32 lg:pt-48'
         >
           <input
             type='text'
@@ -180,8 +180,8 @@ export default function Home() {
                 />
               </span>
             </div> */}
-          <div className='grid grid-cols-12 md:h-screen h-full'>
-            <div className='col-span-6 bg-fourth z-10'>
+          <div className='grid grid-cols-12 h-full'>
+            <div className='md:col-span-6 col-span-12 bg-fourth z-10 p-4 overflow-hidden'>
               <Wobble>
                 <div className='absoulte w-[800px] h-[800px] overflow-hidden'>
                   <Image
@@ -195,55 +195,55 @@ export default function Home() {
               {/* <Mouse /> */}
             </div>
 
-            <div className='col-span-6 '>
-              <div className='h-2/4 bg-primary flex flex-col items-center z-10'>
-                <div className='flex h-1/3 pt-20 pl-10 w-full justify-center'>
-                  <h1 className='text-7xl text-center'></h1>
+            <div className='md:col-span-6 col-span-12'>
+              <div className='md:h-2/4 bg-primary flex flex-col items-center z-10'>
+                <div className='flex md:h-0 h-1/3 md:py-20 py-4 pl-10 w-full justify-center md:hidden'>
+                  <h1 className='md:text-7xl text-5xl text-center'>Sebastian Rieger</h1>
                 </div>
-                <div className='flex h-1/3 pt-10'>
-                  <span className='text-8xl hover:mt-5 transition-all'>S</span>
-                  <span className='text-8xl hover:mt-5 transition-all'>e</span>
-                  <span className='text-8xl hover:mt-5 transition-all'>b</span>
-                  <span className='text-8xl hover:mt-5 transition-all'>a</span>
-                  <span className='text-8xl hover:mt-5 transition-all'>s</span>
-                  <span className='text-8xl hover:mt-5 transition-all'>t</span>
-                  <span className='text-8xl hover:mt-5 transition-all'>i</span>
-                  <span className='text-8xl hover:mt-5 transition-all'>a</span>
-                  <span className='text-8xl hover:mt-5 transition-all'>n</span>
+                <div className='md:flex md:h-2/4 h-0  overflow-hidden'>
+                  <span className='text-8xl hover:text-5xl transition-all'>S</span>
+                  <span className='text-8xl hover:text-5xl transition-all'>e</span>
+                  <span className='text-8xl hover:text-5xl transition-all'>b</span>
+                  <span className='text-8xl hover:text-5xl transition-all'>a</span>
+                  <span className='text-8xl hover:text-5xl transition-all'>s</span>
+                  <span className='text-8xl hover:text-5xl transition-all'>t</span>
+                  <span className='text-8xl hover:text-5xl transition-all'>i</span>
+                  <span className='text-8xl hover:text-5xl transition-all'>a</span>
+                  <span className='text-8xl hover:text-5xl transition-all'>n</span>
                 </div>
-                <div className='h-1/3 flex pb-10 '>
-                  <span className='text-8xl hover:pt-5 transition-all'>R</span>
-                  <span className='text-8xl hover:pt-5 transition-all'>i</span>
-                  <span className='text-8xl hover:pt-5 transition-all'>e</span>
-                  <span className='text-8xl hover:pt-5 transition-all'>g</span>
-                  <span className='text-8xl hover:pt-5 transition-all'>e</span>
-                  <span className='text-8xl hover:pt-5 transition-all'>r</span>
+                <div className='md:h-2/4 h-0 flex md:pb-10  overflow-hidden'>
+                  <span className='text-8xl hover:text-5xl transition-all'>R</span>
+                  <span className='text-8xl hover:text-5xl transition-all'>i</span>
+                  <span className='text-8xl hover:text-5xl transition-all'>e</span>
+                  <span className='text-8xl hover:text-5xl transition-all'>g</span>
+                  <span className='text-8xl hover:text-5xl transition-all'>e</span>
+                  <span className='text-8xl hover:text-5xl transition-all'>r</span>
                 </div>
               </div>
-              <div className='h-2/4 flex self-end justify-self-end bg-secondary overflow-visible'>
-                <div className='flex flex-col ml-10 pt-10 z-20'>
-                  <span className='inline text-5xl hover:pl-10 transition-all pt-3'>
-                    <Compass className='inline h-10 w-10 mr-5' />
+              <div className='md:h-2/4 md:py-0 py-4 bg-secondary'>
+                <div className='grid grid-cols-2 md:justify-start justify-center z-20'>
+                  <span className='flex flex-nowrap col-span-1 md:text-5xl text-2xl hover:pl-10 hover:pl-4 transition-all p-3'>
+                    <Compass className='inline md:h-10 md:w-10 mr-5' />
                     Science
                   </span>
-                  <span className='text-5xl hover:pl-10 transition-all pt-3'>
-                    <Zap className='inline h-10 w-10 mr-5' />
+                  <span className='flex flex-nowrap col-span-1 md:text-5xl text-2xl hover:pl-10 transition-all p-3'>
+                    <Zap className='inline md:h-10 md:w-10 mr-5' />
                     GameDev
                   </span>
-                  <span className='text-5xl hover:pl-10 transition-all pt-3'>
-                    <Terminal className='inline h-10 w-10 mr-5' />
+                  <span className='flex flex-nowrap col-span-1 md:text-5xl text-2xl hover:pl-10 transition-all p-3'>
+                    <Terminal className='inline md:h-10 md:w-10 mr-5' />
                     Coder
                   </span>
-                  <span className='text-5xl hover:pl-10 transition-all pt-3'>
-                    <Edit2 className='inline h-10 w-10 mr-5' />
+                  <span className='flex flex-nowrap col-span-1 md:text-5xl text-2xl hover:pl-10 transition-all p-3'>
+                    <Edit2 className='inline md:h-10 md:w-10 mr-5' />
                     Designer
                   </span>
-                  <span className='text-5xl hover:pl-10 transition-all pt-3'>
-                    <Music className='inline h-10 w-10 mr-5' />
+                  <span className='flex flex-nowrap col-span-1 md:text-5xl text-2xl hover:pl-10 transition-all p-3'>
+                    <Music className='inline md:h-10 md:w-10 mr-5' />
                     Musician
                   </span>
-                  <span className='text-5xl hover:pl-10 transition-all pt-3'>
-                    <Tv className='inline h-10 w-10 mr-5' />
+                  <span className='flex flex-nowrap col-span-1 md:text-5xl text-2xl hover:pl-10 transition-all p-3'>
+                    <Tv className='inline md:h-10 md:w-10 mr-5' />
                     Pop culture
                   </span>
                 </div>
@@ -251,10 +251,10 @@ export default function Home() {
             </div>
           </div>
           <div className='grid grid-cols-12 bg-primary h-30' ref={ref}>
-            <div className='col-start-7 col-span-6 bg-secondary h-20 rounded-bl-xl w-full transition-all duration-1000 z-10'></div>
+            <div className='col-start-7 col-span-6 bg-secondary md:h-20 rounded-bl-xl w-full transition-all duration-1000 z-10 md:hidden visible'></div>
             <div
               className={classNames(
-                'col-start-10 col-span-1 bg-secondary h-0 w-10 rounded-br-2xl transition-all duration-1000',
+                'md:col-start-10 col-start-11 col-span-1 bg-secondary h-0 w-10 rounded-br-2xl transition-all duration-1000',
                 {
                   'h-10': inView,
                 }
@@ -262,7 +262,7 @@ export default function Home() {
             ></div>
             <div
               className={classNames(
-                'col-start-9 col-span-1 bg-secondary h-0 w-10 rounded-l-xl justify-self-end transition-all duration-1000',
+                'md:col-start-9 col-start-10 col-span-1 bg-secondary h-0 w-10 rounded-l-xl justify-self-end transition-all duration-1000',
                 {
                   'h-10': inView,
                 }
@@ -271,7 +271,7 @@ export default function Home() {
             <div className='col-start-6 col-span-1  h-0'></div>
             <div
               className={classNames(
-                'col-start-10 col-span-1 bg-secondary h-0 w-10 rounded-r-2xl transition-all duration-1000',
+                'md:col-start-10 col-start-11 col-span-1 bg-secondary h-0 md:w-10 w-full md:rounded-r-2xl rounded-tr-2xl transition-all duration-1000',
                 {
                   'h-10': inView,
                 }
@@ -279,9 +279,9 @@ export default function Home() {
             ></div>
           </div>
           <div className='grid grid-cols-12'>
-            <div className='col-span-3 h-80'></div>
-            <div className='col-span-3 bg-fourth h-full rounded-l-2xl overflow-hidden'>
-              <div className='flex flex-col h-full '>
+            <div className='md:col-span-3 col-span-1 h-80'></div>
+            <div className='md:col-span-3 col-span-6 bg-fourth h-full rounded-l-2xl overflow-hidden'>
+              <div className='flex flex-col h-full'>
                 <div className='grow min-h-[25%] hover:min-h-[75%] transition-all duration-1000  bg-primary flex flex-row '>
                   <div className='grow min-w-[25%] hover:min-w-[75%] transition-all duration-1000  bg-third'>
                     <div className='relative w-full h-full '>
@@ -328,35 +328,35 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='col-span-3 bg-secondary h-full rounded-br-2xl pt-10 px-10 flex flex-col'>
-              <h2 className='text-4xl font-bold'>Find me</h2>
-              <span className='text-2xl h-9 mt-4 hover:text-3xl transition-all duration-500'>
+            <div className='md:col-span-3 col-span-4 bg-secondary h-full rounded-br-2xl md:p-10 p-2 flex flex-col'>
+              <h2 className='md:text-4xl text-xl font-bold'>Find me</h2>
+              <span className='md:text-2xl text-base h-9 my-4 transition-all duration-500'>
                 <a
                   href='https://www.openstreetmap.org/#map=16/50.9460/6.9522'
                   target='_blank'
                   rel='noreferrer'
                 >
-                  <MapPin className='inline h-6 w-6 mr-3' />
+                  <MapPin className='md:inline md:h-6 h-3 md:w-6 w-3 mr-3' />
                   Cologne, Germany
                 </a>
               </span>
-              <span className='text-2xl h-9 mt-4 hover:text-3xl transition-all duration-500'>
-                <Phone className='inline h-6 w-6 mr-3' />
+              <span className='md:text-2xl text-base h-9 my-4 transition-all duration-500'>
+                <Phone className='md:inline md:h-6 h-3 md:w-6 w-3 mr-3' />
                 +49177 / 6879019
               </span>
-              <span className='text-2xl h-9 mt-4 hover:text-3xl transition-all duration-500'>
+              <span className='md:text-2xl text-base h-9 my-4 transition-all duration-500'>
                 <a href='"mailto:rieger.geo@gmail.com"'>
-                  <Send className='inline h-6 w-6 mr-3' />
-                  <span>rieger.geo@gmail.com</span>
+                  <Send className='md:inline md:h-6 h-3 md:w-6 w-3 mr-3' />
+                  <span>rieger.geo @gmail.com</span>
                 </a>
               </span>
-              <span className='text-2xl h-9 mt-4 hover:text-3xl transition-all duration-500'>
+              <span className='md:text-2xl text-base h-9 my-4 transition-all duration-500'>
                 <a
                   href='https://github.com/donrigoyeah/'
                   target='_blank'
                   rel='noreferrer'
                 >
-                  <GitHub className='inline h-6 w-6 mr-3' />
+                  <GitHub className='md:inline md:h-6 h-3 md:w-6 w-3 mr-3' />
                   <span>donrigoyeah</span>
                 </a>
               </span>
@@ -367,7 +367,7 @@ export default function Home() {
             <div
               ref={ref2}
               className={classNames(
-                'col-start-7 col-span-1 bg-secondary h-0 w-10 rounded-br-2xl  transition-all duration-1000',
+                'md:col-start-7 col-start-8 col-span-1 bg-secondary h-0 w-10 rounded-br-2xl  transition-all duration-1000',
                 {
                   'h-10': inView2,
                 }
@@ -375,7 +375,7 @@ export default function Home() {
             ></div>
             <div
               className={classNames(
-                'col-start-6 col-span-1 bg-secondary h-0 w-10 justify-self-end rounded-tl-xl transition-all duration-1000',
+                'md:col-start-6 col-start-7 col-span-1 bg-secondary h-0 md:w-10 w-full justify-self-end rounded-tl-xl transition-all duration-1000',
                 {
                   'h-10': inView2,
                 }
@@ -393,7 +393,7 @@ export default function Home() {
                   <MouseParallaxChild
                     factorX={0.1}
                     factorY={0.1}
-                    className='absolute left-1/4 top-1/4'
+                    className='absolute md:left-1/4 md:top-1/4 top-4 left-0'
                     resetOnLeave
                   >
                     <Feather className='w-40 h-40 text-third' />
@@ -401,12 +401,12 @@ export default function Home() {
                   <table className='w-full r-0'>
                     <thead>
                       <tr className='flex flex-col relative mb-5'>
-                        <td className='text-5xl pb-5 font-bold'>Education</td>
+                        <td className='md:text-5xl text-2xl pb-5 font-bold'>Education</td>
                         <td className='absolute h-0.5 bg-black w-96 block -right-10 bottom-2'></td>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr className='text-2xl relative '>
+                      <tr className='md:text-2xl text-lg relative '>
                         <td className='pr-4'>
                           <a
                             href='https://www.edgerton.k12.oh.us/'
@@ -421,7 +421,7 @@ export default function Home() {
                           &nbsp;
                         </td>
                       </tr>
-                      <tr className='text-2xl relative '>
+                      <tr className='md:text-2xl text-lg relative '>
                         <td className='pr-4'>
                           <a
                             href='https://www.gymnasium-leichlingen.de/'
@@ -439,7 +439,7 @@ export default function Home() {
                       <tr className='text-2xl'>
                         <td> &nbsp;</td>
                       </tr>
-                      <tr className='text-2xl relative '>
+                      <tr className='md:text-2xl text-lg relative '>
                         <td className='pr-4'>
                           <a
                             href='https://www2.unesp.br/'
@@ -454,7 +454,7 @@ export default function Home() {
                           &nbsp;
                         </td>
                       </tr>
-                      <tr className='text-2xl relative '>
+                      <tr className='md:text-2xl text-lg relative '>
                         <td className='pr-4'>
                           <a
                             href='https://www.uni-heidelberg.de/de'
@@ -475,7 +475,7 @@ export default function Home() {
                       <tr className='text-2xl'>
                         <td> &nbsp;</td>
                       </tr>
-                      <tr className='text-2xl relative '>
+                      <tr className='md:text-2xl text-lg relative '>
                         <td className='pr-4'>
                           <a
                             href='https://www.uni-kiel.de/de/'
@@ -512,7 +512,7 @@ export default function Home() {
                   <MouseParallaxChild
                     factorX={0.1}
                     factorY={0.1}
-                    className='absolute right-1/4 top-1/4'
+                    className='absolute md:right-1/4 right-0 md:top-1/4 top-4'
                     resetOnLeave
                   >
                     <DollarSign className='w-40 h-40 text-third' />
@@ -520,7 +520,7 @@ export default function Home() {
                   <table className=''>
                     <thead>
                       <tr className='flex flex-col relative mb-5'>
-                        <td className='text-5xl pb-5 font-bold'>Work</td>
+                        <td className='md:text-5xl text-2xl pb-5 font-bold'>Work</td>
                         <td className='absolute h-0.5 bg-black w-96 block -left-10 bottom-2'></td>
                       </tr>
                     </thead>
@@ -531,7 +531,7 @@ export default function Home() {
                       <tr className='text-2xl'>
                         <td> &nbsp;</td>
                       </tr>
-                      <tr className='text-2xl relative block'>
+                      <tr className='md:text-2xl text-lg relative block'>
                         <td className='absolute -left-10 w-10 h-[2px] top-[40%] bg-black'>
                           &nbsp;
                         </td>
@@ -552,7 +552,7 @@ export default function Home() {
                       <tr className='text-2xl'>
                         <td> &nbsp;</td>
                       </tr>
-                      <tr className='text-2xl relative block'>
+                      <tr className='md:text-2xl text-lg relative block'>
                         <td className='absolute -left-10 w-10 h-[2px] top-[40%] bg-black'>
                           &nbsp;
                         </td>
@@ -567,7 +567,7 @@ export default function Home() {
                           </a>
                         </td>
                       </tr>
-                      <tr className='text-2xl relative block'>
+                      <tr className='md:text-2xl text-lg relative block'>
                         <td className='absolute -left-10 w-10 h-[2px] top-[40%] bg-black'>
                           &nbsp;
                         </td>
@@ -585,7 +585,7 @@ export default function Home() {
                       <tr className='text-2xl'>
                         <td> &nbsp;</td>
                       </tr>
-                      <tr className='text-2xl relative block'>
+                      <tr className='md:text-2xl text-lg relative block'>
                         <td className='absolute -left-10 w-10 h-[2px] top-[40%] bg-black'>
                           &nbsp;
                         </td>
@@ -600,7 +600,7 @@ export default function Home() {
                           </a>
                         </td>
                       </tr>
-                      <tr className='text-2xl relative block'>
+                      <tr className='md:text-2xl text-lg relative block'>
                         <td className='absolute -left-10 w-10 h-[2px] top-[40%] bg-black'>
                           &nbsp;
                         </td>
@@ -996,6 +996,7 @@ export default function Home() {
                         src={gameProjects[project].images[0]}
                         className='absolute overflow-hidden object-cover'
                         alt='some image'
+                        priority
                         fill
                       />
                     </div>
@@ -1006,6 +1007,7 @@ export default function Home() {
                         src={gameProjects[project].images[1]}
                         className='absolute overflow-hidden object-cover'
                         alt='some image'
+                        priority
                         fill
                       />
                     </div>
@@ -1018,6 +1020,7 @@ export default function Home() {
                         src={gameProjects[project].images[2]}
                         className='absolute overflow-hidden object-cover'
                         alt='some image'
+                        priority
                         fill
                       />
                     </div>
@@ -1028,6 +1031,7 @@ export default function Home() {
                         src={gameProjects[project].images[3]}
                         className='absolute overflow-hidden object-cover'
                         alt='some image'
+                        priority
                         fill
                       />
                     </div>
@@ -1236,10 +1240,20 @@ const gameProjects = [
   },
 ];
 
+// const PreloadedImage = preloadImage("https://via.placeholder.com/700x500");
+
+// function preloadImage(src) {
+//   const image = new Image();
+//   image.src = src;
+//   return function PreloadedImage(props) {
+//     return <img {...props} src={src} />;
+//   };
+// }
+
 const Wobble = ({ children }) => {
   return (
     <MouseParallaxContainer
-      className='w-full h-full flex justify-center items-center'
+      className='w-full h-full flex justify-end items-center'
       containerStyle={{ overflow: 'visible' }}
       resetOnLeave
     >
