@@ -61,7 +61,7 @@ export default function Home() {
   const [codeAccepted, setCodeAccepted] = useState(false);
   const [showPage, setShowPage] = useState(false);
   const [screenWidth, setScreenWidth] = useState(0);
-  const code = '1234';
+  const code = '5123';
 
   useEffect(() => {
     if ('undefined' != typeof window) {
@@ -89,9 +89,31 @@ export default function Home() {
 
     return (
       <>
+ <div className='relative md:pt-20 text-center text-sm'>
+          <p className='text-2xl'>
+            Welcome to my portfolio website
+          </p>
+          <p className='text-xlp pt-4'>This website is best experienced on desktop.</p>
+          <p
+            className={classNames(' pt-4', {
+              'text-red-500': screenWidth < 1000,
+              'text-orange-500': screenWidth >= 1000 && screenWidth < 1450,
+              'text-green-500': screenWidth >= 1450,
+            })}
+          >
+            {screenWidth &&
+              'Your screen size is ' + screenWidth + ' px.'}
+          </p>
+          <p
+            className={classNames('pt-4')}
+          >
+            The code is 5123.
+          </p>
+        </div>
+
         <form
           onSubmit={handleSubmit}
-          className='grid grid-cols-3 justify-center items-center pt-16 md:pt-32 lg:pt-48'
+          className='grid grid-cols-3 justify-center items-center pt-12 md:pt-24 lg:pt-36'
         >
           <input
             type='text'
@@ -110,28 +132,6 @@ export default function Home() {
             Start
           </button>
         </form>
-        <div className='relative pt-40 text-center text-sm'>
-          <p>
-            Welcome to my portfolio website
-          </p>
-          <p>This website is best experienced on desktop.</p>
-          <p
-            className={classNames(' pt-4', {
-              'text-red-500': screenWidth < 1000,
-              'text-orange-500': screenWidth >= 1000 && screenWidth < 1450,
-              'text-green-500': screenWidth >= 1450,
-            })}
-          >
-            {screenWidth &&
-              screenWidth < 2000 &&
-              'Your screen size is ' + screenWidth + ' px.'}
-          </p>
-          <p
-            className={classNames('pt-20')}
-          >
-            The code for the page is 1234.
-          </p>
-        </div>
       </>
     );
   };
@@ -162,7 +162,7 @@ export default function Home() {
           className={classNames(
             'relative transition-opacity duration-[3s] bg-transparent',
             {
-              'opacity-0 h-0': !showPage,
+              'opacity-0 h-0 hidden': !showPage,
               'opacity-100 overflow-y-visible': showPage,
             }
           )}
@@ -752,7 +752,7 @@ export default function Home() {
                     <span className='flex flex-row '>
                       <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' />
                       <span className='md:pl-10 pl-1'>
-                        Excellent understanding of OOP C#
+                        Excellent understanding of OOP C# in Unity
                       </span>
                     </span>
                   </span>
@@ -760,8 +760,16 @@ export default function Home() {
                     <span className='flex flex-row '>
                       <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' />
                       <span className='md:pl-10 pl-1'>
-                        Great Unity knowledge. Input Systems, Animation Controller, Scribtable
+                        Input Systems, Animation Controller, Scribtable
                         Objects, UI and Statesystems
+                      </span>
+                    </span>
+                  </span>
+                  <span className='block md:text-2xl text-basse pt-5'>
+                    <span className='flex flex-row '>
+                      <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' />
+                      <span className='md:pl-10 pl-1'>
+                        Basic understanding of VFX, Shader Graph and coded shaders
                       </span>
                     </span>
                   </span>
@@ -777,15 +785,7 @@ export default function Home() {
                     <span className='flex flex-row '>
                       <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' />
                       <span className='md:pl-10 pl-1'>
-                      Good knowledge of Go backends, Postgres database and Data analysis with Python and Anaconda
-                      </span>
-                    </span>
-                  </span>
-                  <span className='block md:text-2xl text-basse pt-5'>
-                    <span className='flex flex-row '>
-                      <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' />
-                      <span className='md:pl-10 pl-1'>
-                        Basic understanding of VFX, Shader Graph and coded shaders
+                      Good knowledge of Go backends with SQL and data analysis in Python and Anaconda
                       </span>
                     </span>
                   </span>
@@ -875,7 +875,7 @@ export default function Home() {
                   key={index}
                   id="game_filter"
                   className={classNames(
-                    'col-span-6 h-20 text-center text-3xl p-6 hover:text-2xl transition-all duration-500 font-bold',
+                    'col-span-6 h-20 text-center text-3xl p-6 hover:text-2xl transition-all duration-500 font-bold cursor-pointer',
                     {
                       'shadow-none': index === 0,
                       'bg-fourth ': index === 0 || index === 3,
@@ -935,7 +935,7 @@ export default function Home() {
                 <a
                   key={index}
                   className={classNames(
-                    'flex h-20 text-center justify-center items-center py-auto md:text-2xl text-base font-bold md:p-6 hover:text-xl transition-all duration-500 md:shadow-left',
+                    'flex h-20 text-center justify-center items-center py-auto md:text-2xl text-base font-bold md:p-6 hover:text-xl transition-all duration-500 md:shadow-left cursor-pointer',
                     {
                       'md:col-span-2 col-span-4': filteredGames.length == 6,
                       'col-span-3': filteredGames.length == 4,
@@ -1173,7 +1173,7 @@ export default function Home() {
                 </div>
               </div>
             </div> 
-            <a className='col-span-12 pt-4 underline text-center w-full  md:hidden inline-block' href='#game_filter'>Jump up to all games</a>
+            <a className='col-span-12 pt-4 underline text-center w-full cursor-pointer md:hidden inline-block' href='#game_filter'>Jump up to all games</a>
           </div>
           <div className='grid grid-cols-12 bg-primary' ref={ref5}>
             <div
@@ -1394,11 +1394,11 @@ const gameProjects = [
         title: 'Cubit',
         subtitle: '3D Puzzler',
         describtion:
-          'Going back to original "Mobile Dungeon" concept, but focusing on non-mobil multiplayer with an unique concept of interaction, gameplay mechanics and overall game experience. As a spirit summoned into a mask by a distinct wizzard faction, you resurrect a body in a graveyard and fight your way through the outskirts forward to the central tower. The lands are cut off, that only you and the spirits of the other factions can pass through the magic barrier and try to be the first reaching the top of the mysterious tower.',
-        goal: 'Provide an unique mulitplayer experience with a deep combat system, a motivating sense of progression and a interesting lore.',
-        duration: '-',
+          'Cubit is a 3D Puzzler, where the player can tilt a large cube and with that move the small cubit on its surface. It is not physics-based, but instead includes stable game state that does the calculation. The game includes a "normal" quest mode, where in 40 small levels new hazards and intricated new blocks are added. Next is the rush mode, where you have to clear as many levels as possible in a fixed time duration, with ever increasing difficulty of the generated levels. Lastly is the level-editor, where players can create their own maps and share them as json files.',
+        goal: 'Recreate the mechanic of tilting the big cubit that results in the correct movement of the cubit. The transition between faces should be fluid and correct. An integration to a server, where people can sent their own levels that can be fetched from within the game would be amazing.',
+        duration: '3 Month',
         ownRating: 5,
-        conclusion: 'Lets Go ...',
+        conclusion: 'Very complicated mechanics. Rotation can be unforgiving and intransparent. Refactoring this would be wise...',
         images: [
           '/assets/images/games/cubit1.png',
           '/assets/images/games/cubit2.png',
@@ -1408,13 +1408,13 @@ const gameProjects = [
       },
       {
         title: 'Democracy',
-        subtitle: '3rd Person Rougelike Online Action Adventures',
+        subtitle: 'Strategy game',
         describtion:
-          'Going back to original "Mobile Dungeon" concept, but focusing on non-mobil multiplayer with an unique concept of interaction, gameplay mechanics and overall game experience. As a spirit summoned into a mask by a distinct wizzard faction, you resurrect a body in a graveyard and fight your way through the outskirts forward to the central tower. The lands are cut off, that only you and the spirits of the other factions can pass through the magic barrier and try to be the first reaching the top of the mysterious tower.',
-        goal: 'Provide an unique mulitplayer experience with a deep combat system, a motivating sense of progression and a interesting lore.',
-        duration: '-',
+          'This game was created during the 2024 Demographic Game Jam. You play as the leader of a population of 100 people and your goal is to be reelected for the next term. The population can be analysed on their political ideas, gender, age, religion and their attitude towards the player. In a round you have to answer a certain amount of questions regarding hot topics and see how it affects your liking. The catch; the happier the people are, the less likely they are going to vote. Can you balance the system?',
+        goal: 'Create a fun contribution to the demographic game jam.',
+        duration: '2 Days',
         ownRating: 5,
-        conclusion: 'Lets Go ...',
+        conclusion: 'I pitched my idea to the jam participants and found some people who liked it and joined me on this. Fun, fun & fun.',
         images: [
           '/assets/images/games/democray1.png',
           '/assets/images/games/democracy2.png',
@@ -1426,11 +1426,11 @@ const gameProjects = [
         title: 'Onio',
         subtitle: '3rd Person Exploration Adventures',
         describtion:
-          'Going back to original "Mobile Dungeon" concept, but focusing on non-mobil multiplayer with an unique concept of interaction, gameplay mechanics and overall game experience. As a spirit summoned into a mask by a distinct wizzard faction, you resurrect a body in a graveyard and fight your way through the outskirts forward to the central tower. The lands are cut off, that only you and the spirits of the other factions can pass through the magic barrier and try to be the first reaching the top of the mysterious tower.',
-        goal: 'Provide an unique mulitplayer experience with a deep combat system, a motivating sense of progression and a interesting lore.',
-        duration: '-',
+          'There is a loud noise with a bright flash of light and the game starts. In this 3rd person action adventure, you can explore the world of Onio. The world is captured in a layer between to spheres, that are constantly growing and pushing platforms with houses and their inhabitants apart from each other. Sometimes there are glowing lights flying towards the center, resulting in a earthquake and changing the plants and organisms in the players layer. But the question is what is towards the center, and even more interesting, what is outside? ',
+        goal: 'Create a continous evolving world, interesting story and fun gameplay.',
+        duration: '2 Month',
         ownRating: 5,
-        conclusion: 'Lets Go ...',
+        conclusion: 'During the second collaborative project at CGL we had the ',
         images: [
           '/assets/images/games/Onio1.png',
           '/assets/images/games/Onio2.png',
