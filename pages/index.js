@@ -685,7 +685,7 @@ export default function Home() {
           <div className='flex'>
             <div className='grow bg-third min-w-0 hover:min-w-[80%] transition-all duration-1000 max-w-[33.33%] w-1/3 whitespace-nowrap overflow-hidden'>
               <div className='flex flex-col justify-center shadow-right h-full'>
-                <div className='w-full py-10 pl-10'>
+                <div className='w-full py-10 md:pl-10 pl-4'>
                   <div className='flex justify-center items-center gap-x-4'>
                     <Image
                       src='/assets/svg/blender.svg'
@@ -699,7 +699,7 @@ export default function Home() {
                       width={50}
                       alt='gimp logo'
                     />
-                    <h2 className='text-4xl font-bold'>Art</h2>
+                    <h2 className='md:text-4xl text-2xl font-bold'>Art</h2>
                   </div>
                   <span className='block md:text-2xl text-basse pt-5'>
                     <span className='flex flex-row '>
@@ -732,7 +732,7 @@ export default function Home() {
             </div>
             <div className='grow bg-fourth min-w-0 hover:min-w-[80%] transition-all duration-1000 max-w-[33.33%] w-1/3 whitespace-nowrap overflow-hidden'>
               <div className='flex flex-col justify-center shadow-right h-full'>
-                <div className='py-10 pl-10'>
+                <div className='py-10 md:pl-10 pl-4'>
                   <div className='flex justify-center items-center gap-x-4'>
                     <Image
                       src='/assets/svg/unity.svg'
@@ -746,7 +746,7 @@ export default function Home() {
                       width={50}
                       alt='c sharp logo'
                     />
-                    <h2 className='text-4xl font-bold'>Programming</h2>
+                    <h2 className='md:text-4xl text-2xl font-bold'>Programming</h2>
                   </div>
                   <span className='block md:text-2xl text-basse pt-5'>
                     <span className='flex flex-row '>
@@ -759,7 +759,7 @@ export default function Home() {
                   <span className='block md:text-2xl text-basse pt-5'>
                     <span className='flex flex-row '>
                       <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' />
-                      <span className='md:pl-10 pl-1'>
+                      <span className='md:pl-10 pl-1 '>
                         Input Systems, Animation Controller, Scribtable
                         Objects, UI and Statesystems
                       </span>
@@ -794,7 +794,7 @@ export default function Home() {
             </div>
             <div className='grow bg-secondary min-w-0 hover:min-w-[80%] transition-all duration-1000 max-w-[33.33%] w-1/3 whitespace-nowrap overflow-hidden'>
               <div className='flex flex-col justify-center h-full'>
-                <div className='py-10 pl-10'>
+                <div className='py-10 md:pl-10 pl-4'>
                   <div className='flex justify-center items-center gap-x-4'>
                     <Image
                       src='/assets/svg/miro.svg'
@@ -802,7 +802,7 @@ export default function Home() {
                       width={50}
                       alt='c sharp logo'
                     />
-                    <h2 className='text-4xl font-bold'>Design</h2>
+                    <h2 className='md:text-4xl text-2xl font-bold'>Design</h2>
                   </div>
                   <span className='block md:text-2xl text-basse pt-5'>
                     <span className='flex flex-row '>
@@ -875,7 +875,7 @@ export default function Home() {
                   key={index}
                   id="game_filter"
                   className={classNames(
-                    'col-span-6 h-20 text-center text-3xl p-6 hover:text-2xl transition-all duration-500 font-bold cursor-pointer',
+                    'col-span-6 h-20 text-center text-3xl p-6 hover:text-2xl transition-all duration-500 font-bold cursor-pointer whitespace-nowrap',
                     {
                       'shadow-none': index === 0,
                       'bg-fourth ': index === 0 || index === 3,
