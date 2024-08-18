@@ -401,7 +401,7 @@ export default function Home() {
                     <thead>
                       <tr className='flex flex-col relative mb-5'>
                         <td className='md:text-5xl text-2xl pb-5 font-bold'>Education</td>
-                        <td className='absolute h-0.5 bg-black w-96 block -right-10 bottom-2'></td>
+                        {/* <td className='absolute h-0.5 bg-black w-96 block -right-10 bottom-2'></td> */}
                       </tr>
                     </thead>
                     <tbody>
@@ -538,7 +538,7 @@ export default function Home() {
                     <thead>
                       <tr className='flex flex-col relative mb-5'>
                         <td className='md:text-5xl text-2xl pb-5 font-bold'>Work</td>
-                        <td className='absolute h-0.5 bg-black w-96 block -left-10 bottom-2'></td>
+                        {/* <td className='absolute h-0.5 bg-black w-96 block -left-10 bottom-2'></td> */}
                       </tr>
                     </thead>
                     <tbody>
