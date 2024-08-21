@@ -1100,7 +1100,7 @@ export default function Home() {
           </div>
           <div
             className={classNames(
-              'w-full md:h-[600px] transition-all grid grid-cols-12 p-8',
+              'w-full transition-all grid grid-cols-12 p-8',
               {
                 'bg-fourth': project === 0 || project === 3,
                 'bg-third': project === 1 || project === 4,
