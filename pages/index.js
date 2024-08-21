@@ -231,15 +231,15 @@ export default function Home() {
                   </span>
                   <span className='flex flex-nowrap col-span-1 md:text-5xl text-2xl hover:pl-10 transition-all p-3'>
                     <Terminal className='inline md:h-10 md:w-10 mr-5' />
-                    Coder
+                    Code
                   </span>
                   <span className='flex flex-nowrap col-span-1 md:text-5xl text-2xl hover:pl-10 transition-all p-3'>
                     <Edit2 className='inline md:h-10 md:w-10 mr-5' />
-                    Designer
+                    Design
                   </span>
                   <span className='flex flex-nowrap col-span-1 md:text-5xl text-2xl hover:pl-10 transition-all p-3'>
                     <Music className='inline md:h-10 md:w-10 mr-5' />
-                    Musician
+                    Music
                   </span>
                   <span className='flex flex-nowrap col-span-1 md:text-5xl text-2xl hover:pl-10 transition-all p-3'>
                     <Tv className='inline md:h-10 md:w-10 mr-5' />
