@@ -69,7 +69,7 @@ export default function Home() {
     }
   }, [codeAccepted]);
 
-  const scollToRef = useRef();
+  const scrollToGame = useRef();
 
   const CodeForm = () => {
     const [inputValue, setInputValue] = useState('');
@@ -196,7 +196,7 @@ export default function Home() {
               <div className='relative w-full h-10'>
                 <button 
                     className='absolute bg-red-600 h-10 w-10 rounded-full cursor-pointer self-end text-sm text-white hover:bottom-8 bottom-0 transition-all'
-                    onClick={() => scollToRef.current.scrollIntoView({ behavior: 'smooth' })}
+                    onClick={() => scrollToGame.current.scrollIntoView({ behavior: 'smooth' })}
                   >
                    
                 </button>
@@ -1258,7 +1258,7 @@ export default function Home() {
             ></div>
           </div>
           <div className='pt-20 bg-fourth'>
-            <div className='snap-start h-full snap-y' ref={scollToRef}>
+            <div className='snap-start h-full snap-y' ref={scrollToGame}>
               <ClickGame />
             </div>
           </div>
@@ -1577,6 +1577,9 @@ const ClickGame = () => {
   const [pointSize, setPointSize] = useState(startPointSize);
   const [isRunning, setIsRunning] = useState(false);
 
+  const scrollToScore = useRef();
+
+
   const handleClick = () => {
     if (!isRunning) {
       setIsRunning(true);
@@ -1590,6 +1593,7 @@ const ClickGame = () => {
     else if (score >= 5) {
       resetGame();
       setIsRunning(false);
+      scrollToScore.current.scrollIntoView({ behavior: 'smooth' });
       return;
     }
     else {
@@ -1661,7 +1665,7 @@ const ClickGame = () => {
           'grid-cols-1 md:grid-cols-3': scoreLast !== 0,
         }
       )}>
-        <div className='flex flex-col w-full h-screen justify-center md:col-span-2'>
+        <div className='flex flex-col w-full h-screen justify-center md:col-span-2 md:order-1 order-2'>
           <div className='relative h-3/4 w-3/4 bg-primary rounded-3xl mx-auto '>
             <a
               className='w-full h-full z-30 cursor-pointer block transition-all'
@@ -1683,13 +1687,14 @@ const ClickGame = () => {
         </div>
         <div
           className={classNames(
-            'justify-center text-center relative transition-all duration-1000 flex flex-row',
+            'justify-center text-center relative transition-all duration-1000 flex flex-row md:order-2 order-1',
             {
               'w-0 h-0 overflow-hidden ': scoreLast === 0,
               'w-full md:w-80 overflow-visible md:col-start-3 col-start-1 md:col-span-1 pb-12':
                 scoreLast !== 0,
             }
           )}
+          ref={scrollToScore}
         >
           <div className='bg-primary rounded-2xl p-3 md:w-3/4 w-2/4 justify-center flex'>
           <table className=''>
@@ -1697,22 +1702,22 @@ const ClickGame = () => {
               <tr>
                 <td className='text-right'></td>
                 <td className='text-center text-2xl px-4 pb-2 '>
-                  <Play className='h-6 w-6' />
+                  <Play className='md:h-6 md:w-6 h-4 w-4' />
                 </td>
                 <td className='text-center text-2xl px-4 pb-2 border-l border-r border-black'>
-                  <CornerDownLeft className='h-6 w-6' />
+                  <CornerDownLeft className='md:h-6 md:w-6 h-4 w-4' />
                 </td>
                 <td className='text-center text-2xl px-4 pb-2'>
-                  <Award className='h-6 w-6' />
+                  <Award className='md:h-6 md:w-6 h-4 w-4' />
                 </td>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td className='text-left pt-2 pr-4'>
-                  <Clock className='h-6 w-6' />
+                  <Clock className='md:h-6 md:w-6 h-4 w-4' />
                 </td>
-                <td className='text-2xl pt-2 px-4 border-l border-black'>
+                <td className='md:text-2xl text-md pt-2 px-4 border-l border-black'>
                   {(timer / 10).toFixed(1)}
                 </td>
                 <td className=' border-l border-r border-black pt-2'>
@@ -1724,9 +1729,9 @@ const ClickGame = () => {
               </tr>
               <tr>
                 <td className='text-left '>
-                  <Crosshair className='h-6 w-6' />
+                  <Crosshair className='md:h-6 md:w-6 h-4 w-4' />
                 </td>
-                <td className='text-2xl border-l border-black'>{ratio}%</td>
+                <td className='md:text-2xl text-md border-l border-black'>{ratio}%</td>
                 <td className=' border-l border-r border-black'>
                   {ratioLast}%
                 </td>
