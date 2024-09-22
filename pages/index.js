@@ -1593,7 +1593,8 @@ const ClickGame = () => {
     else if (score >= 5) {
       resetGame();
       setIsRunning(false);
-      scrollToScore.current.scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => scrollToScore.current.scrollIntoView({ behavior: 'smooth' }), 0);
+      //scrollToScore.current.scrollIntoView();
       return;
     }
     else {
@@ -1655,7 +1656,7 @@ const ClickGame = () => {
   }, [isRunning]);
 
   return (
-    <>
+    <div className='scroll-smooth'>
       <h2 className='text-5xl py-12 text-center bg-fourth text-primary font-extrabold'>
         Click Dot
       </h2>
@@ -1690,7 +1691,7 @@ const ClickGame = () => {
             'justify-center text-center relative transition-all duration-1000 flex flex-row md:order-2 order-1',
             {
               'w-0 h-0 overflow-hidden ': scoreLast === 0,
-              'w-full md:w-80 overflow-visible md:col-start-3 col-start-1 md:col-span-1 pb-12':
+              'w-full md:w-80 overflow-visible md:col-start-3 col-start-1 md:col-span-1 py-12':
                 scoreLast !== 0,
             }
           )}
@@ -1742,7 +1743,7 @@ const ClickGame = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
