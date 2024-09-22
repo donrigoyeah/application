@@ -21,7 +21,7 @@ import {
   Tv,
   Zap,
 } from 'react-feather';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import {
   MouseParallaxChild,
@@ -69,6 +69,8 @@ export default function Home() {
     }
   }, [codeAccepted]);
 
+  const scollToRef = useRef();
+
   const CodeForm = () => {
     const [inputValue, setInputValue] = useState('');
     const [isValid, setIsValid] = useState(false);
@@ -89,7 +91,7 @@ export default function Home() {
 
     return (
       <>
- <div className='relative md:pt-20 text-center text-sm'>
+        <div className='relative md:pt-20 text-center text-sm'>
           <p className='text-2xl'>
             Welcome to my portfolio website
           </p>
@@ -191,6 +193,14 @@ export default function Home() {
                   />
                 </div>
               </Wobble>
+              <div className='relative w-full h-10'>
+                <button 
+                    className='absolute bg-red-600 h-10 w-10 rounded-full cursor-pointer self-end text-sm text-white hover:bottom-8 bottom-0 transition-all'
+                    onClick={() => scollToRef.current.scrollIntoView({ behavior: 'smooth' })}
+                  >
+                   
+                </button>
+              </div>
               {/* <Mouse /> */}
             </div>
 
@@ -219,9 +229,9 @@ export default function Home() {
                   <span className='text-8xl hover:text-5xl transition-all'>r</span>
                 </div>
               </div>
-              <div className='md:h-2/4 md:p-12 p-4 bg-secondary'>
+              <div className='md:h-2/4 md:p-12 p-4 bg-secondary overflow-hidden'>
                 <div className='grid grid-cols-2 md:justify-start justify-center z-20'>
-                  <span className='flex flex-nowrap col-span-1 md:text-5xl text-2xl hover:pl-10 hover:pl-4 transition-all p-3'>
+                  <span className='flex flex-nowrap col-span-1 md:text-5xl text-2xl hover:pl-10 hover:pl-10 transition-all p-3'>
                     <Compass className='inline md:h-10 md:w-10 mr-5' />
                     Science
                   </span>
@@ -230,7 +240,7 @@ export default function Home() {
                     GameDev
                   </span>
                   <span className='flex flex-nowrap col-span-1 md:text-5xl text-2xl hover:pl-10 transition-all p-3'>
-                    <Terminal className='inline md:h-10 md:w-10 mr-5' />
+                    <Terminal className='inline md:h-10 md:w-10 h-5 w-5 mr-5' />
                     Code
                   </span>
                   <span className='flex flex-nowrap col-span-1 md:text-5xl text-2xl hover:pl-10 transition-all p-3'>
@@ -338,10 +348,6 @@ export default function Home() {
                   <MapPin className='md:inline md:h-6 h-3 md:w-6 w-3 mr-3' />
                   Cologne, Germany
                 </a>
-              </span>
-              <span className='md:text-2xl text-base h-9 my-4 transition-all duration-500'>
-                <Phone className='md:inline md:h-6 h-3 md:w-6 w-3 mr-3' />
-                +49177 / 6879019
               </span>
               <span className='md:text-2xl text-base h-9 my-4 transition-all duration-500'>
                 <a href='"mailto:rieger.geo@gmail.com"'>
@@ -1251,8 +1257,8 @@ export default function Home() {
               )}
             ></div>
           </div>
-          <div className='snap-y h-full'>
-            <div className='snap-start'>
+          <div className='pt-20 bg-fourth'>
+            <div className='snap-start h-full snap-y' ref={scollToRef}>
               <ClickGame />
             </div>
           </div>
@@ -1276,8 +1282,8 @@ const ProgressBar = (props) => {
     </div> */}
     <div className="flex items-center justify-center w-40 h-40">
       <svg className="transform -rotate-90 w-full h-full " viewBox="0 0 200 200">
-        <circle cx="100" cy="100" r="50" stroke="#694338" stroke-width="20" fill="transparent"/> 
-        <circle cx="100" cy="100" r="50"stroke="#31ab2a" stroke-width="20" fill="transparent" 
+        <circle cx="100" cy="100" r="50" stroke="#694338" strokeWidth="20" fill="transparent"/> 
+        <circle cx="100" cy="100" r="50"stroke="#31ab2a" strokeWidth="20" fill="transparent" 
            strokeDasharray={`${2*3.14*50*(3.6*percentage)/360} 400`}
            className="bg-proGreen origin-[50%_50%]"
           />
@@ -1455,7 +1461,7 @@ const gameProjects = [
     ],
   },
   {
-    section: "After 2023",
+    section: "During CGL",
     content: [
       {
         title: 'Planet B',
@@ -1558,7 +1564,7 @@ const ClickGame = () => {
   const startPoint = { left: 50, top: 50 };
 
   const [score, setScore] = useState(0);
-  const [misses, setMisses] = useState(1);
+  const [misses, setMisses] = useState(0);
   const [ratio, setRatio] = useState(100);
   const [timer, setTimer] = useState(0);
   const [scoreLast, setScoreLast] = useState(0);
@@ -1574,29 +1580,35 @@ const ClickGame = () => {
   const handleClick = () => {
     if (!isRunning) {
       setIsRunning(true);
+      setScore(1);
       setPointSize(startPointSize);
-      setMisses(1);
+      setCurrentPoint({
+        left: Math.floor(Math.random() * 9) * 10 + 10,
+        top: Math.floor(Math.random() * 9) * 10 + 10,
+      });
     }
-    if (score >= 5) {
+    else if (score >= 5) {
       resetGame();
       setIsRunning(false);
       return;
     }
-
-    setScore(score + 1);
-    setCurrentPoint({
-      left: Math.floor(Math.random() * 9) * 10 + 10,
-      top: Math.floor(Math.random() * 9) * 10 + 10,
-    });
-    setPointSize({
-      height: pointSize.height - 2,
-      width: pointSize.width - 2,
-    });
+    else {
+      setScore(score + 1);
+      setCurrentPoint({
+        left: Math.floor(Math.random() * 9) * 10 + 10,
+        top: Math.floor(Math.random() * 9) * 10 + 10,
+      });
+      setPointSize({
+        height: pointSize.height - 2,
+        width: pointSize.width - 2,
+      });
+    }
   };
 
   const handleMiss = () => {
-    setMisses(misses + 1);
-    setRatio(Math.floor((score / (misses + score)) * 100));
+    if (isRunning){
+      setMisses(misses + 1);
+    }
   };
 
   const resetGame = () => {
@@ -1613,7 +1625,6 @@ const ClickGame = () => {
 
     setScore(0);
     setMisses(0);
-    setRatio(100);
     setTimer(0);
     setScoreLast(1);
 
@@ -1621,6 +1632,14 @@ const ClickGame = () => {
     setPointSize(startPointSize);
     return;
   };
+
+  useEffect(() => {
+    if(misses === 0){
+      setRatio(100);
+    }else{
+      setRatio(Math.floor((score / (misses + score)) * 100));
+    }
+  }, [score, misses]);
 
   useEffect(() => {
     if (!isRunning) return;
@@ -1633,19 +1652,24 @@ const ClickGame = () => {
 
   return (
     <>
-      <div className='w-full h-screen bg-fourth flex flex-row items-center pb-20'>
-        <div className='flex flex-col w-full h-full'>
-          <h2 className='text-5xl py-12 text-center bg-fourth text-primary font-extrabold'>
-            Click Dot
-          </h2>
-          <div className='relative h-3/4 w-3/4 bg-primary rounded-3xl mx-auto'>
+      <h2 className='text-5xl py-12 text-center bg-fourth text-primary font-extrabold'>
+        Click Dot
+      </h2>
+      <div className={classNames('w-full h-full bg-fourth grid items-center',
+        {
+          'grid-cols-1 md:grid-cols-1': scoreLast === 0,
+          'grid-cols-1 md:grid-cols-3': scoreLast !== 0,
+        }
+      )}>
+        <div className='flex flex-col w-full h-screen justify-center md:col-span-2'>
+          <div className='relative h-3/4 w-3/4 bg-primary rounded-3xl mx-auto '>
             <a
               className='w-full h-full z-30 cursor-pointer block transition-all'
               onClick={() => handleMiss()}
             />
             <a
               className={classNames(
-                `z-40 absolute flex justify-center items-center h-${pointSize.height} w-${pointSize.width} rounded-full  cursor-pointer transition-all duration-1000 left-[${currentPoint.left}%] top-[${currentPoint.top}%]`,
+                `z-40 absolute flex justify-center items-center h-${pointSize.height} w-${pointSize.width} rounded-full cursor-pointer transition-all duration-1000 left-[${currentPoint.left}%] top-[${currentPoint.top}%]`,
                 {
                   'bg-green-600': isRunning,
                   'bg-red-600': !isRunning,
@@ -1659,14 +1683,15 @@ const ClickGame = () => {
         </div>
         <div
           className={classNames(
-            'justify-center text-center relative transition-all duration-1000 ',
+            'justify-center text-center relative transition-all duration-1000 flex flex-row',
             {
-              'w-0 overflow-hidden': scoreLast === 0,
-              'w-80 overflow-visible pr-12 bg-primary rounded-2xl p-6 mr-4':
+              'w-0 h-0 overflow-hidden ': scoreLast === 0,
+              'w-full md:w-80 overflow-visible md:col-start-3 col-start-1 md:col-span-1 pb-12':
                 scoreLast !== 0,
             }
           )}
         >
+          <div className='bg-primary rounded-2xl p-3 md:w-3/4 w-2/4 justify-center flex'>
           <table className=''>
             <thead className='border-b border-black'>
               <tr>
@@ -1709,6 +1734,7 @@ const ClickGame = () => {
               </tr>
             </tbody>
           </table>
+          </div>
         </div>
       </div>
     </>
