@@ -1552,7 +1552,7 @@ const gameProjects = [
           'There is a loud noise with a bright flash of light and the game starts. In this 3rd person action adventure, you can explore the world of Onio. The world is captured in a layer between to spheres, that are constantly growing and pushing platforms with houses and their inhabitants apart from each other. Sometimes there are glowing lights flying towards the center, resulting in a earthquake and changing the plants and organisms around the player. But the question is: what is in the other layers, what is in the center and probably even more interesting; what is on the outside? ',
         goal: 'Create a continous evolving world with an interesting story and fun gameplay mechanics.',
         duration: '2 Month',
-        percentage: 80,
+        percentage: 70,
         ownRating: 4,
         conclusion: 'During the second collaborative project at CGL we had the the task to do a experimental/narrative game. The continous growing world had its challenges to implement but in general an amazing experience.',
         images: [
@@ -1564,20 +1564,20 @@ const gameProjects = [
       },
       {
         title: 'The Lousy Mug',
-        subtitle: '3rd Person Exploration Adventures',
+        subtitle: 'Realtime Strategy with 1st person exploration',
         link:"https://zwiebelzitrone.itch.io/tlm",
         describtion:
-          'There is a loud noise with a bright flash of light and the game starts. In this 3rd person action adventure, you can explore the world of Onio. The world is captured in a layer between to spheres, that are constantly growing and pushing platforms with houses and their inhabitants apart from each other. Sometimes there are glowing lights flying towards the center, resulting in a earthquake and changing the plants and organisms around the player. But the question is: what is in the other layers, what is in the center and probably even more interesting; what is on the outside? ',
-        goal: 'Create a continous evolving world with an interesting story and fun gameplay mechanics.',
+          'Enter this online multiplayer arena as known as The Lousy Mug. Besides the fellow adventurers, mystic enteties inhabit this dark fantasy tavern. Find a seat within and play alone or against others in a variety of games at the tables. The main act is called Shrooms of Dooms. Summon divers mushrooms, train them in different task, craft tools and weapons and fight your oponents. This is a fast paced competetive real time strategy game. Find the best strategy of progression but do not neglet your defense.',
+        goal: 'Make a working network multiplayer game',
         duration: '2 Month',
         percentage: 80,
-        ownRating: 4,
-        conclusion: 'During the second collaborative project at CGL we had the the task to do a experimental/narrative game. The continous growing world had its challenges to implement but in general an amazing experience.',
+        ownRating: 5,
+        conclusion: 'For the third project phase at CGL we had to create a multiplayer experience. The complexity of handling and validating parameters over the network was defenetly missjudged. Very glad it worked at the end.',
         images: [
-          '/assets/images/games/Onio1.png',
-          '/assets/images/games/Onio2.png',
-          '/assets/images/games/Onio3.png',
-          '/assets/images/games/Onio4.png',
+          '/assets/images/games/TLM_1.png',
+          '/assets/images/games/TLM_2.png',
+          '/assets/images/games/TLM_3.png',
+          '/assets/images/games/TLM_4.png',
         ],
       }
     ],
