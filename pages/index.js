@@ -357,12 +357,23 @@ export default function Home() {
               </span>
               <span className='md:text-2xl text-base h-9 my-4 transition-all duration-500'>
                 <a
-                  href='https://github.com/donrigoyeah/'
+                  href='https://zwiebelzitrone.itch.io/'
                   target='_blank'
                   rel='noreferrer'
+                  className='md:flex md:flex-nowrap'
                 >
-                  <GitHub className='md:inline md:h-6 h-3 md:w-6 w-3 mr-3' />
-                  <span>donrigoyeah</span>
+                  <div className='md:inline md:h-6 h-3 md:w-6 w-3 mr-3'>
+                    <Image
+                        src='/assets/svg/itch.svg'
+                        objectFit="cover"
+                        style={{objectFit:"cover"}}
+                        height={50}
+                        width={50}
+                        alt='itch io logo'
+                      />
+                  </div>
+                  {/* <GitHub className='md:inline md:h-6 h-3 md:w-6 w-3 mr-3' /> */}
+                  <span>Zwiebel+Zitrone</span>
                 </a>
               </span>
             </div>
@@ -691,9 +702,9 @@ export default function Home() {
           <div className='flex md:h-auto h-[600px]'>
             <div className='grow bg-third min-w-0 hover:min-w-[80%] transition-all duration-1000 max-w-[33.33%] w-1/3 md:whitespace-nowrap  overflow-hidden'>
               <div className='flex flex-col justify-start shadow-right h-full'>
-                <div className='w-full py-10 md:pl-10 pl-4'>
-                  <div className='flex items-center gap-x-4'>
-                    <h2 className='md:text-4xl text-2xl font-bold pr-4 whitespace-nowrap'>Arts and Craft</h2>
+                <div className='py-10 md:pl-10 pl-4 pr-8'>
+                  <div className='flex items-center gap-x-4 pr-4'>
+                    <h2 className='md:text-4xl text-2xl font-bold whitespace-nowrap'>Arts and Craft</h2>
                     <Image
                       src='/assets/svg/blender.svg'
                       height={50}
@@ -746,9 +757,9 @@ export default function Home() {
             </div>
             <div className='grow bg-fourth min-w-0 hover:min-w-[80%] transition-all duration-1000 max-w-[33.33%] w-1/3 md:whitespace-nowrap overflow-hidden'> 
               <div className='flex flex-col justify-start shadow-right h-full'>
-                <div className='py-10 md:pl-10 pl-4'>
-                  <div className='flex items-center gap-x-4'>
-                    <h2 className='md:text-4xl text-2xl font-bold pr-4'>Programming</h2>
+                <div className='py-10 md:pl-10 pl-4 pr-8'>
+                  <div className='flex items-center gap-x-4 pr-4'>
+                    <h2 className='md:text-4xl text-2xl font-bold'>Programming</h2>
                     <Image
                       src='/assets/svg/unity.svg'
                       height={50}
@@ -807,10 +818,10 @@ export default function Home() {
               </div>
             </div>
             <div className='grow bg-secondary min-w-0 hover:min-w-[80%] transition-all duration-1000 max-w-[33.33%] w-1/3 md:whitespace-nowrap overflow-hidden'>
-              <div className='col-span-6 flex flex-col justify-start h-full'>
-                <div className='py-10 md:pl-10 pl-4'>
-                  <div className='flex items-center gap-x-4'>
-                    <h2 className='md:text-4xl text-2xl font-bold pr-4'>Design and Sein</h2>
+              <div className='flex flex-col justify-start shadow-right h-full'>
+                <div className='py-10 md:pl-10 pl-4 pr-8'>
+                  <div className='flex items-center gap-x-4 pr-4'>
+                    <h2 className='md:text-4xl text-2xl font-bold '>Design and Sein</h2>
                     <Image
                         src='/assets/svg/drawio.svg'
                         height={50}
@@ -970,11 +981,12 @@ export default function Home() {
                     {
                       'md:col-span-2 col-span-4': filteredGames.length == 6,
                       'col-span-3': filteredGames.length == 4,
+                      'col-span-4': filteredGames.length == 3,
                       'shadow-none': index === 0,
                       'bg-fourth ': index === 0,
                       'bg-third ': index === 1,
                       'bg-secondary': index === 2,
-                      'md:bg-fourth bg-third ': index === 3,
+                      'md:bg-fourth bg-fourth': index === 3, // bg-third
                       'md:bg-third bg-secondary ': index === 4,
                       'md:bg-secondary bg-fourth': index === 5,
                       'md:shadow-inner' : project == index,
@@ -1004,6 +1016,7 @@ export default function Home() {
                   'h-10': project === 0,
                   'col-start-1': filteredGames.length == 6,
                   'col-start-1': filteredGames.length == 4,
+                  'col-start-1': filteredGames.length == 3,
                 }
               )}
             ></div>
@@ -1014,6 +1027,7 @@ export default function Home() {
                   'h-10': project === 1,
                   'col-start-3 ': filteredGames.length == 6,
                   'col-start-4': filteredGames.length == 4,
+                  'col-start-6': filteredGames.length == 3,
                 }
               )}
             ></div>
@@ -1025,6 +1039,7 @@ export default function Home() {
                   'h-10': project === 1,
                   'col-start-4': filteredGames.length == 6,
                   'col-start-5': filteredGames.length == 4,
+                  'col-start-7': filteredGames.length == 3,
                 }
               )}
             ></div>
@@ -1035,6 +1050,7 @@ export default function Home() {
                   'h-10': project === 2,
                   'col-start-5': filteredGames.length == 6,
                   'col-start-7': filteredGames.length == 4,
+                  'col-start-9': filteredGames.length == 3,
                 }
               )}
             ></div>
@@ -1046,6 +1062,7 @@ export default function Home() {
                   'h-10': project === 2,
                   'col-start-6': filteredGames.length == 6,
                   'col-start-8': filteredGames.length == 4,
+                  'col-start-10': filteredGames.length == 3,
                 }
               )}
             ></div>
@@ -1056,6 +1073,7 @@ export default function Home() {
                   'h-10': project === 3,
                   'col-start-8': filteredGames.length == 6,
                   'col-start-10': filteredGames.length == 4,
+                  'col-start-12': filteredGames.length == 3,
                 }
               )}
             ></div>
@@ -1066,6 +1084,7 @@ export default function Home() {
                   'h-10': project === 3,
                   'col-start-7': filteredGames.length == 6,
                   'col-start-9': filteredGames.length == 4,
+                  'col-start-11': filteredGames.length == 3,
                 }
               )}
             ></div>
@@ -1115,9 +1134,14 @@ export default function Home() {
             )}
           >
             <div className='md:col-span-4 col-span-12 md:px-5 flex flex-col'>
-              <h2 className='md:text-6xl text-4xl whitespace-nowrap overflow-visible font-bold'>
-                {filteredGames[project].title}
-              </h2>
+              <div className='w-full flex justify-between'>
+                <h2 className='md:text-6xl text-4xl overflow-visible font-bold'> 
+                {/* whitespace-nowrap */}
+                  {filteredGames[project].title}
+                </h2>
+                {/* {filteredGames[project].link ? <a className="text-xl hover:shadow-inner hover:rounded-lg transition-all duration-500 ml-8 p-3 justify-center bg-primary flex whitespace-nowrap justify-self-center self-center" href={filteredGames[project].link} target="_blank">Play game</a> : null} */}
+                
+              </div>
               <span>{filteredGames[project].subtitle}</span>
               <h3 className='md:text-3xl text-2xl mt-5'>Describtion:</h3>
               <p className='md:text-xl text-base'>{filteredGames[project].describtion}</p>
@@ -1127,7 +1151,11 @@ export default function Home() {
               </div>
             </div>
             <div className='md:col-span-4 col-span-12 md:px-12 mb-5 flex flex-col justify-end'>
-              <h3 className='text-xl text-right pr-20'></h3>
+              <div className='text-xl text-right justify-self-end'>
+                {filteredGames[project].link ? <a className="font-bold text-xl hover:shadow-inner hover:rounded-lg transition-all duration-500 ml-8 md:p-5 p-3 justify-center bg-primary flex whitespace-nowrap justify-self-center self-center" href={filteredGames[project].link} target="_blank">Play game</a> : null}
+
+              </div>
+
               <h3 className='md:text-3xl text-2xl mt-5 flex justify-between'>
                   Duration:
                   <span>{filteredGames[project].duration}</span>
@@ -1313,65 +1341,66 @@ const StarRating = ({ rating }) => {
 
 const gameProjects = [
   {
-    section: "Before 2023",
+    section: "Game Jams",
     content: [
-      {
-        title: 'Galaxy Shooter',
-        subtitle: '2D Arcade Space Shooter',
-        describtion:
-          'In this classical 2D spaceshooter you and a friend can experience the thrill of flying through space and shooting increasingly difficult waves of alien spaceships. A variety of power-ups help you upgrade your weaponry and defense mechanisms. Can you beat the highscore?',
-        goal: 'Learn how to create video games with the Unity Engine',
-        duration: '1 Week',
-        percentage: 100,
-        ownRating: 2,
-        conclusion:
-          'This game was developed during a Unity Course from Udemy and consists of a casual ludic 2D arcade space shooter experience with powerups, waves of spawning enemies and increasing difficulty. Implementation of sprite animations, sound effects and local multiplayer taught me the fundamentals of of the Unity Engine. A simple ludic game that is easy to pick up, play with friends and hard to master.',
-        images: [
-          '/assets/images/games/galaxyshooter1.png',
-          '/assets/images/games/galaxyshooter2.png',
-          '/assets/images/games/galaxyshooter3.png',
-          '/assets/images/games/galaxyshooter4.png',
-        ],
-      },
-      {
-        title: 'Mobile Dungeon',
-        subtitle: '3rd Person Action Adventue',
-        describtion: "Take the control about a generic hero in a generic fantasy world. Explore the different bioms, fight enemies, gather loot and of course level, level, level. Use the aim-lock function to circle enemies and dodge their attacks. Check your stamina and make sure to have the right timing to perform attacks. Designed for mobile devices, you can swap weapons fast or cycle through your selected weapons with ease. Can you see it all?!",
-        goal: 'Create a multiplayer dark-souls for mobile devices. Easy peasy lemon squeezy...',
-        duration: 'about 2 Months',
-        percentage: 20,
-        ownRating: 2,
-        conclusion:
-        (
-          <span className='w-full'>
-            <span>
-              From zero to infinity. Since i knew everything after the Udemy course, why
-              not build a 3D online multiplayer dungeon crawler for mobile... So I followed
-              the youtuber{' '}
-              <>
-                <a
-                  href='https: //www.youtube.com/playlist?list=PLD_vBJjpCwJtrHIW1SS5_BNRk6KZJZ7_d'
-                  className='pointer-cursor underline'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  Sebastian Graves
-                </a>
-              </>
-              {' '} who gave very insightfull information about e.g. character controllers, state-machines and animation masks. On top i tried to add the Mirror networking package to create a peer-to-peer experience. I dove deep and got myself lost. At the time this project was way too ambitious for me and i learned a valuable lesson about scoping. Aim high, but not out of reach. The result was a barley working prototyp with many features that i was still feeling kinda proud of it.
-            </span>
-          </span>
-        ),
-        images: [
-          '/assets/images/games/mobiledungeon3.png',
-          '/assets/images/games/mobiledungeon1.png',
-          '/assets/images/games/mobiledungeon2.png',
-          '/assets/images/games/mobiledungeon4.png',
-        ],
-      },
+      // {
+      //   title: 'Galaxy Shooter',
+      //   subtitle: '2D Arcade Space Shooter',
+      //   describtion:
+      //     'In this classical 2D spaceshooter you and a friend can experience the thrill of flying through space and shooting increasingly difficult waves of alien spaceships. A variety of power-ups help you upgrade your weaponry and defense mechanisms. Can you beat the highscore?',
+      //   goal: 'Learn how to create video games with the Unity Engine',
+      //   duration: '1 Week',
+      //   percentage: 100,
+      //   ownRating: 2,
+      //   conclusion:
+      //     'This game was developed during a Unity Course from Udemy and consists of a casual ludic 2D arcade space shooter experience with powerups, waves of spawning enemies and increasing difficulty. Implementation of sprite animations, sound effects and local multiplayer taught me the fundamentals of of the Unity Engine. A simple ludic game that is easy to pick up, play with friends and hard to master.',
+      //   images: [
+      //     '/assets/images/games/galaxyshooter1.png',
+      //     '/assets/images/games/galaxyshooter2.png',
+      //     '/assets/images/games/galaxyshooter3.png',
+      //     '/assets/images/games/galaxyshooter4.png',
+      //   ],
+      // },
+      // {
+      //   title: 'Mobile Dungeon',
+      //   subtitle: '3rd Person Action Adventue',
+      //   describtion: "Take the control about a generic hero in a generic fantasy world. Explore the different bioms, fight enemies, gather loot and of course level, level, level. Use the aim-lock function to circle enemies and dodge their attacks. Check your stamina and make sure to have the right timing to perform attacks. Designed for mobile devices, you can swap weapons fast or cycle through your selected weapons with ease. Can you see it all?!",
+      //   goal: 'Create a multiplayer dark-souls for mobile devices. Easy peasy lemon squeezy...',
+      //   duration: 'about 2 Months',
+      //   percentage: 20,
+      //   ownRating: 2,
+      //   conclusion:
+      //   (
+      //     <span className='w-full'>
+      //       <span>
+      //         From zero to infinity. Since i knew everything after the Udemy course, why
+      //         not build a 3D online multiplayer dungeon crawler for mobile... So I followed
+      //         the youtuber{' '}
+      //         <>
+      //           <a
+      //             href='https: //www.youtube.com/playlist?list=PLD_vBJjpCwJtrHIW1SS5_BNRk6KZJZ7_d'
+      //             className='pointer-cursor underline'
+      //             target='_blank'
+      //             rel='noreferrer'
+      //           >
+      //             Sebastian Graves
+      //           </a>
+      //         </>
+      //         {' '} who gave very insightfull information about e.g. character controllers, state-machines and animation masks. On top i tried to add the Mirror networking package to create a peer-to-peer experience. I dove deep and got myself lost. At the time this project was way too ambitious for me and i learned a valuable lesson about scoping. Aim high, but not out of reach. The result was a barley working prototyp with many features that i was still feeling kinda proud of it.
+      //       </span>
+      //     </span>
+      //   ),
+      //   images: [
+      //     '/assets/images/games/mobiledungeon3.png',
+      //     '/assets/images/games/mobiledungeon1.png',
+      //     '/assets/images/games/mobiledungeon2.png',
+      //     '/assets/images/games/mobiledungeon4.png',
+      //   ],
+      // },
       {
         title: 'NutExpress',
         subtitle: '3rd Squirrel Adventure',
+        link: 'https://zwiebelzitrone.itch.io/lostfound',
         describtion: (
           <span className='w-full'>
             <span>
@@ -1391,7 +1420,6 @@ const gameProjects = [
             </span>
           </span>
         ),
-
         goal: 'Having fun at a gamejam and completing a entire own game',
         duration: '48 Hours',
         percentage: 100,
@@ -1408,6 +1436,7 @@ const gameProjects = [
       {
         title: 'Spheris',
         subtitle: 'Spherical Space Tetris',
+        link:'https://zwiebelzitrone.itch.io/spheris',
         describtion:
           'A spherical tetris game for mobile devices. Random generated pieces (3 blocked) fall from the top onto a circle. The player controls the sphere by rotating it and can flip the falling pieces. If a row is filled entirely, the blocks will disolve.The more points you get, the faster they fall. This game includes an intricated gamestate-system and an approach to a simple solution to a tricky visual challenge. It gets very intense.',
         goal: 'Developing another casual game and finish it.',
@@ -1424,44 +1453,62 @@ const gameProjects = [
         ],
       },
       {
-        title: 'Solaris',
-        subtitle: '3rd Person Rougelike Base Builder & Shooter',
+        title: 'Democracy is (no) joke',
+        subtitle: 'Strategy game',
+        link: 'https://zwiebelzitrone.itch.io/democracy-is-no-joke',
         describtion:
-          'You are an AI and tasked with retrieving artifact from islands research facility. A virus infected all wildlife making them dangerous enemies. Other AIs are on the same mission as you so you have to hurry. You need to build your base, gather resources and generate energy. The energy is the main resource that similar to stamina, replenishes during the day/clear weather, but is used from batteries during the night. This energy management is the main gameloop and oversight are necesseray for the basebuilding, exploration and combat. Dynamic wheater and a day/night cycle require different energy sources. Additionaly, the longer you stay on this planet, the more aggresive the enviroment becomes...',
-        goal: 'Create a more complex game with different gameplay mechanics. Building structures, gather resources, switch vehicles and an interesting world to explore. Also try to learn shaders.',
-        duration: 'Paused after 2 Month',
-        percentage: 20,
+          'You play as the leader of a population of 100 people and your goal is to be reelected for the next term. The population can be analysed on their political ideas, gender, age, religion and their general attitude towards their leader. In a round you have to answer a certain amount of questions regarding hot topics. These "spicey" questions are splitting the population so you need to decide on which group of people to favor. The catch: the happier the people are, the less likely they are going to vote. Can you beat the system and safe your next term?',
+        goal: 'Having fun at the 2024 demographic game jam at the cologne game lab.',
+        duration: '2 Days',
+        percentage: 90,
         ownRating: 5,
-        conclusion:
-          'Unfortunatly a too ambitious project to do alone while working a regual job. A project i would love to continue working on if the resources are available.',
+        conclusion: 'I pitched my design idea to the jam participants and found people who liked to joined me on this. It was a great weekend and we created a very modular system the could be extended on. Overall: Fun, fun & fun',
         images: [
-          '/assets/images/games/solaris1.png',
-          '/assets/images/games/solaris2.png',
-          '/assets/images/games/solaris3.png',
-          '/assets/images/games/solaris4.png',
+          '/assets/images/games/democray1.png',
+          '/assets/images/games/democracy2.png',
+          '/assets/images/games/democracy3.png',
+          '/assets/images/games/democracy4.png',
         ],
-      },
-      {
-        title: 'Spirit Mask',
-        subtitle: '3rd Person Rougelike Online Action Adventures',
-        describtion:
-          'The player controls a spirit that is summoned into a mask by a wizzard. They are tasked to reach a central tower in this magical world. This structure is protected by a magical shield that prevents the wizzard from entering the region and he sents the spirit instead. The player resurrects a dead body in a graveyard close to the magic barrier and has to fight their way through the outskirts against mystical creatures, towards the central tower. The player can level up their controlled body, but once it takes to many hits, the player masks has to pick up a "fresh" one at the graveyard and start over. It seems that spirits from other wizzard factions are passing through the magic barrier as well. Try to be the first to reach the top of the mysterious tower and retrieve the tressures back to your master.',
-        goal: 'Design an unique PvPvE mulitplayer experience with a deep combat system, a motivating sense of progression and a interesting lore. ',
-        duration: '-',
-        percentage: 0,
-        ownRating: 4,
-        conclusion: 'Elaborating on the original "Mobile Dungeon" concept, but focusing on the multiplayer elements with an unique concept of interaction between players, gameplay mechanics and overall experience. Designing all the pieces and looking at the project and its entirely, I realize that this as well will require a team of motivate individuals to complete and is therefore put on hold.',
-        images: [
-          '/assets/images/games/sm1.jpg',
-          '/assets/images/games/sm2.jpg',
-          '/assets/images/games/sm3.jpg',
-          '/assets/images/games/sm4.jpg',
-        ],
-      },
+      }
+      // {
+      //   title: 'Solaris',
+      //   subtitle: '3rd Person Rougelike Base Builder & Shooter',
+      //   describtion:
+      //     'You are an AI and tasked with retrieving artifact from islands research facility. A virus infected all wildlife making them dangerous enemies. Other AIs are on the same mission as you so you have to hurry. You need to build your base, gather resources and generate energy. The energy is the main resource that similar to stamina, replenishes during the day/clear weather, but is used from batteries during the night. This energy management is the main gameloop and oversight are necesseray for the basebuilding, exploration and combat. Dynamic wheater and a day/night cycle require different energy sources. Additionaly, the longer you stay on this planet, the more aggresive the enviroment becomes...',
+      //   goal: 'Create a more complex game with different gameplay mechanics. Building structures, gather resources, switch vehicles and an interesting world to explore. Also try to learn shaders.',
+      //   duration: 'Paused after 2 Month',
+      //   percentage: 20,
+      //   ownRating: 5,
+      //   conclusion:
+      //     'Unfortunatly a too ambitious project to do alone while working a regual job. A project i would love to continue working on if the resources are available.',
+      //   images: [
+      //     '/assets/images/games/solaris1.png',
+      //     '/assets/images/games/solaris2.png',
+      //     '/assets/images/games/solaris3.png',
+      //     '/assets/images/games/solaris4.png',
+      //   ],
+      // },
+      // {
+      //   title: 'Spirit Mask',
+      //   subtitle: '3rd Person Rougelike Online Action Adventures',
+      //   describtion:
+      //     'The player controls a spirit that is summoned into a mask by a wizzard. They are tasked to reach a central tower in this magical world. This structure is protected by a magical shield that prevents the wizzard from entering the region and he sents the spirit instead. The player resurrects a dead body in a graveyard close to the magic barrier and has to fight their way through the outskirts against mystical creatures, towards the central tower. The player can level up their controlled body, but once it takes to many hits, the player masks has to pick up a "fresh" one at the graveyard and start over. It seems that spirits from other wizzard factions are passing through the magic barrier as well. Try to be the first to reach the top of the mysterious tower and retrieve the tressures back to your master.',
+      //   goal: 'Design an unique PvPvE mulitplayer experience with a deep combat system, a motivating sense of progression and a interesting lore. ',
+      //   duration: '-',
+      //   percentage: 0,
+      //   ownRating: 4,
+      //   conclusion: 'Elaborating on the original "Mobile Dungeon" concept, but focusing on the multiplayer elements with an unique concept of interaction between players, gameplay mechanics and overall experience. Designing all the pieces and looking at the project and its entirely, I realize that this as well will require a team of motivate individuals to complete and is therefore put on hold.',
+      //   images: [
+      //     '/assets/images/games/sm1.jpg',
+      //     '/assets/images/games/sm2.jpg',
+      //     '/assets/images/games/sm3.jpg',
+      //     '/assets/images/games/sm4.jpg',
+      //   ],
+      // },
     ],
   },
   {
-    section: "During CGL",
+    section: "Projects",
     content: [
       {
         title: 'Planet B',
@@ -1483,6 +1530,7 @@ const gameProjects = [
       {
         title: 'Cubit',
         subtitle: '3D Puzzler',
+        link: "https://zwiebelzitrone.itch.io/cubid",
         describtion:
           'Cubit is a 3D Puzzler, where the player can tilt a large cube and with that move the small cubit on its surface. It is not physics-based, but instead includes stable game state that does the calculation. The game includes a "normal" quest mode, where in XX levels new hazards and blocks are introduced. In the rush mode the player has to clear as many levels as possible in a fixed time duration, with ever increasing complexity of the generated levels. Lastly is the level-editor, where players can create their own maps and share them as json files.',
         goal: 'Recreate the mechanic of tilting the big cubit that results in the correct movement of the cubit. The transition between faces should be fluid and correct. An integration to a server, where people can share their own levels would be amazing.',
@@ -1495,23 +1543,6 @@ const gameProjects = [
           '/assets/images/games/cubit2.png',
           '/assets/images/games/cubit3.png',
           '/assets/images/games/cubit4.png',
-        ],
-      },
-      {
-        title: 'Democracy is (no) joke',
-        subtitle: 'Strategy game',
-        describtion:
-          'You play as the leader of a population of 100 people and your goal is to be reelected for the next term. The population can be analysed on their political ideas, gender, age, religion and their general attitude towards their leader. In a round you have to answer a certain amount of questions regarding hot topics. These "spicey" questions are splitting the population so you need to decide on which group of people to favor. The catch: the happier the people are, the less likely they are going to vote. Can you beat the system and safe your next term?',
-        goal: 'Having fun at the 2024 demographic game jam at the cologne game lab.',
-        duration: '2 Days',
-        percentage: 90,
-        ownRating: 5,
-        conclusion: 'I pitched my design idea to the jam participants and found people who liked to joined me on this. It was a great weekend and we created a very modular system the could be extended on. Overall: Fun, fun & fun',
-        images: [
-          '/assets/images/games/democray1.png',
-          '/assets/images/games/democracy2.png',
-          '/assets/images/games/democracy3.png',
-          '/assets/images/games/democracy4.png',
         ],
       },
       {
@@ -1531,6 +1562,24 @@ const gameProjects = [
           '/assets/images/games/Onio4.png',
         ],
       },
+      {
+        title: 'The Lousy Mug',
+        subtitle: '3rd Person Exploration Adventures',
+        link:"https://zwiebelzitrone.itch.io/tlm",
+        describtion:
+          'There is a loud noise with a bright flash of light and the game starts. In this 3rd person action adventure, you can explore the world of Onio. The world is captured in a layer between to spheres, that are constantly growing and pushing platforms with houses and their inhabitants apart from each other. Sometimes there are glowing lights flying towards the center, resulting in a earthquake and changing the plants and organisms around the player. But the question is: what is in the other layers, what is in the center and probably even more interesting; what is on the outside? ',
+        goal: 'Create a continous evolving world with an interesting story and fun gameplay mechanics.',
+        duration: '2 Month',
+        percentage: 80,
+        ownRating: 4,
+        conclusion: 'During the second collaborative project at CGL we had the the task to do a experimental/narrative game. The continous growing world had its challenges to implement but in general an amazing experience.',
+        images: [
+          '/assets/images/games/Onio1.png',
+          '/assets/images/games/Onio2.png',
+          '/assets/images/games/Onio3.png',
+          '/assets/images/games/Onio4.png',
+        ],
+      }
     ],
   },
 ];
