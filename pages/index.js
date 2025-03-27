@@ -11,10 +11,8 @@ import {
   DollarSign,
   Edit2,
   Feather,
-  GitHub,
   MapPin,
   Music,
-  Phone,
   Plus,
   Send,
   Terminal,
@@ -61,7 +59,7 @@ export default function Home() {
   const [codeAccepted, setCodeAccepted] = useState(false);
   const [showPage, setShowPage] = useState(false);
   const [screenWidth, setScreenWidth] = useState(0);
-  const code = '5123';
+  const code = '1000$coolBeans';
 
   useEffect(() => {
     if ('undefined' != typeof window) {
@@ -92,9 +90,10 @@ export default function Home() {
     return (
       <>
         <div className='relative md:pt-20 text-center text-sm'>
-          <p className='text-2xl'>
-            Welcome to my portfolio website
+          <p className='text-5xl'>
+            Sebastian Rieger | Portfolio
           </p>
+          {/* ScreenWIdth indicator
           <p className='text-xlp pt-4'>This website is best experienced on desktop.</p>
           <p
             className={classNames(' pt-4', {
@@ -105,18 +104,17 @@ export default function Home() {
           >
             {screenWidth &&
               'Your screen size is ' + screenWidth + ' px.'}
-          </p>
-          <p
-            className={classNames('pt-4')}
-          >
-            The code is 5123.
-          </p>
+          </p> */}
         </div>
 
         <form
           onSubmit={handleSubmit}
           className='grid grid-cols-3 justify-center items-center pt-12 md:pt-24 lg:pt-36'
         >
+           <div className='flex w-full justify-center p-4'>
+            <p className='text-xs'>The code is: 1000$cool</p>
+            <p className='text-xs'>Beans</p>
+          </div>
           <input
             type='text'
             value={inputValue}
@@ -131,7 +129,7 @@ export default function Home() {
             disabled={!isValid}
             className='bg-secondary w-full rounded-tr-2xl rounded-bl-2xl col-start-3 col-span-1 text-center h-10'
           >
-            Start
+            Enter
           </button>
         </form>
       </>
@@ -141,8 +139,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Portfolio SR</title>
-        <meta name='description' content='Portfolio website SR' />
+        <title>Sebastian Rieger Portfolio</title>
+        <meta name='description' content='Portfolio website of Sebastian Rieger' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
@@ -186,6 +184,7 @@ export default function Home() {
               <Wobble>
                 <div className='absoulte w-[800px] h-[800px] overflow-hidden'>
                   <Image
+                    priority
                     src='/assets/images/profilePicCut.png'
                     alt='Profile picture'
                     width={500}
@@ -231,7 +230,7 @@ export default function Home() {
               </div>
               <div className='md:h-2/4 md:p-12 p-4 bg-secondary overflow-hidden'>
                 <div className='grid grid-cols-2 md:justify-start justify-center z-20'>
-                  <span className='flex flex-nowrap col-span-1 md:text-5xl text-2xl hover:pl-10 hover:pl-10 transition-all p-3'>
+                  <span className='flex flex-nowrap col-span-1 md:text-5xl text-2xl hover:pl-10 transition-all p-3'>
                     <Compass className='inline md:h-10 md:w-10 mr-5' />
                     Science
                   </span>
@@ -299,6 +298,7 @@ export default function Home() {
                         className='absolute overflow-hidden object-cover'
                         alt='some image'
                         fill
+                        priority
                       />
                     </div>
                   </div>
@@ -309,6 +309,7 @@ export default function Home() {
                         className='absolute overflow-hidden object-cover'
                         alt='some image'
                         fill
+                        priority
                       />
                     </div>
                   </div>
@@ -321,6 +322,7 @@ export default function Home() {
                         className='absolute overflow-hidden object-cover'
                         alt='some image'
                         fill
+                        priority
                       />
                     </div>
                   </div>
@@ -331,6 +333,7 @@ export default function Home() {
                         className='absolute overflow-hidden object-cover'
                         alt='some image'
                         fill
+                        priority
                       />
                     </div>
                   </div>
@@ -365,7 +368,7 @@ export default function Home() {
                   <div className='md:inline md:h-6 h-3 md:w-6 w-3 mr-3'>
                     <Image
                         src='/assets/svg/itch.svg'
-                        objectFit="cover"
+                        // objectFit="cover"
                         style={{objectFit:"cover"}}
                         height={50}
                         width={50}
@@ -699,8 +702,10 @@ export default function Home() {
               )}
             ></div>
           </div>
-          <div className='flex md:h-auto h-[600px]'>
-            <div className='grow bg-third min-w-0 hover:min-w-[80%] transition-all duration-1000 max-w-[33.33%] w-1/3 md:whitespace-nowrap  overflow-hidden'>
+          {/* md:h-auto */}
+          <div className='flex md:h-[400px] h-[600px]'> 
+          {/* md:whitespace-nowrap */}
+            <div className='grow bg-third min-w-0 hover:min-w-[80%] transition-all duration-1000 max-w-[33.33%] w-1/3 overflow-hidden'>
               <div className='flex flex-col justify-start shadow-right h-full'>
                 <div className='py-10 md:pl-10 pl-4 pr-8'>
                   <div className='flex items-center gap-x-4 pr-4'>
@@ -720,42 +725,43 @@ export default function Home() {
                   </div>
                   <span className='block md:text-2xl text-basse pt-5'>
                     <span className='flex flex-row '>
-                      <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' />
+                      {/* <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' /> */}
                       <span className='md:pl-10 pl-1'>
-                        "Low Poly" 3D Modelling of diverse assests
+                        "Low Poly" 3D Modelling/Sculpting in Blender as assets and/or placeholders
                       </span>
                     </span>
                   </span>
                   <span className='block md:text-2xl text-basse pt-5'>
                     <span className='flex flex-row '>
-                      <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' />
-                      <span className='md:pl-10 pl-1'>Retopology, UV unwrapping, Colorpaletts</span>
+                      {/* <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' /> */}
+                      <span className='md:pl-10 pl-1'>Retopology, UV Unwrapping, Texturing and Colorpaletts. Keeping it simple</span>
                     </span>
                   </span>
                   <span className='block md:text-2xl text-basse pt-5'>
                     <span className='flex flex-row '>
-                      <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' />
+                      {/* <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' /> */}
                       <span className='md:pl-10 pl-1'>Rigging & Animating</span>
                     </span>
                   </span>
                   <span className='block md:text-2xl text-basse pt-5'>
                     <span className='flex flex-row '>
-                      <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' />
-                      <span className='md:pl-10 pl-1'>Basic image creation & editing skills in Gimp/Inkscape</span>
+                      {/* <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' /> */}
+                      <span className='md:pl-10 pl-1'>Image creation & editing in Gimp/Inkscape</span>
                     </span>
                   </span>
                   <span className='block md:text-2xl text-basse pt-5'>
                     <span className='flex flex-row '>
-                      <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' />
+                      {/* <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' /> */}
                       <span className='md:pl-10 pl-1'>
-                        Some kind of musical knowledge in Ableton & Reaper
+                        Basics in Ableton, Reaper & Audacity
                       </span>
                     </span>
                   </span>
                 </div>
               </div>
             </div>
-            <div className='grow bg-fourth min-w-0 hover:min-w-[80%] transition-all duration-1000 max-w-[33.33%] w-1/3 md:whitespace-nowrap overflow-hidden'> 
+            {/* md:whitespace-nowrap */}
+            <div className='grow bg-fourth min-w-0 hover:min-w-[80%] transition-all duration-1000 max-w-[33.33%] w-1/3 overflow-hidden'> 
               <div className='flex flex-col justify-start shadow-right h-full'>
                 <div className='py-10 md:pl-10 pl-4 pr-8'>
                   <div className='flex items-center gap-x-4 pr-4'>
@@ -775,24 +781,23 @@ export default function Home() {
                   </div>
                   <span className='block md:text-2xl text-basse pt-5'>
                     <span className='flex flex-row '>
-                      <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' />
+                      {/* <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' /> */}
                       <span className='md:pl-10 pl-1'>
-                        Excellent understanding of OOP C# in Unity
+                        OOP C# in Unity using standard programming patterns
                       </span>
                     </span>
                   </span>
                   <span className='block md:text-2xl text-basse pt-5'>
                     <span className='flex flex-row '>
-                      <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' />
+                      {/* <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' /> */}
                       <span className='md:pl-10 pl-1'>
-                        Input Systems, Animation Controller, Scribtable
-                        Objects, UI and Statesystems
+                        Input System, Animation Controller, Scribtable Objects, UI and Statesystems
                       </span>
                     </span>
                   </span>
                   <span className='block md:text-2xl text-basse pt-5'>
                     <span className='flex flex-row '>
-                      <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' />
+                      {/* <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' /> */}
                       <span className='md:pl-10 pl-1'>
                         Basic understanding of VFX, Shader Graph and coded shaders
                       </span>
@@ -800,28 +805,29 @@ export default function Home() {
                   </span>
                   <span className='block md:text-2xl text-basse pt-5'>
                     <span className='flex flex-row '>
-                      <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' />
+                      {/* <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' /> */}
                       <span className='md:pl-10 pl-1'>
-                        Multiple years experience in web dev with typescript.
+                        Multiple years of experience in WebDev with Typescript, Go-backends & API Initializing
                       </span>
                     </span>
                   </span>
                   <span className='block md:text-2xl text-basse pt-5'>
                     <span className='flex flex-row '>
-                      <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' />
+                      {/* <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' /> */}
                       <span className='md:pl-10 pl-1'>
-                      Good knowledge of Go backends with SQL and data analysis in Python and Anaconda
+                        Data analysis with MatLab, Python|Anaconda & Machine Learning with Tensorflow
                       </span>
                     </span>
                   </span>
                 </div>
               </div>
             </div>
-            <div className='grow bg-secondary min-w-0 hover:min-w-[80%] transition-all duration-1000 max-w-[33.33%] w-1/3 md:whitespace-nowrap overflow-hidden'>
+            {/* md:whitespace-nowrap */}
+            <div className='grow bg-secondary min-w-0 hover:min-w-[80%] transition-all duration-1000 max-w-[33.33%] w-1/3 overflow-hidden'>
               <div className='flex flex-col justify-start shadow-right h-full'>
                 <div className='py-10 md:pl-10 pl-4 pr-8'>
                   <div className='flex items-center gap-x-4 pr-4'>
-                    <h2 className='md:text-4xl text-2xl font-bold '>Design and Sein</h2>
+                    <h2 className='md:text-4xl text-2xl font-bold whitespace-nowrap'>Design & Sein</h2>
                     <Image
                         src='/assets/svg/drawio.svg'
                         height={50}
@@ -837,41 +843,41 @@ export default function Home() {
                   </div>
                   <span className='block md:text-2xl text-basse pt-5'>
                     <span className='flex flex-row '>
-                      <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' />
+                      {/* <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' /> */}
                       <span className='md:pl-10 pl-1'>
-                        Experiencing in taking the design role in game jams and collaborative projects
+                        Taking the creative lead in game jams and collaborative projects
                       </span>
                     </span>
                   </span>
                   <span className='block md:text-2xl text-basse pt-5'>
                     <span className='flex flex-row '>
-                      <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' />
+                      {/* <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' /> */}
                       <span className='md:pl-10 pl-1'>
-                        much passion
+                        Creating visual concepts of mechanics as UML in draw.io and elaborating narratives and art concepts as moodboards in miro
                       </span>
                     </span>
                   </span>
                   <span className='block md:text-2xl text-basse pt-5'>
                     <span className='flex flex-row '>
-                      <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' />
+                      {/* <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' /> */}
                       <span className='md:pl-10 pl-1'>
-                        such feeling for balancing 
+                        Such feeling for balancing 
                       </span>
                     </span>
                   </span>
                   <span className='block md:text-2xl text-basse pt-5'>
                     <span className='flex flex-row '>
-                      <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' />
+                      {/* <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' /> */}
                       <span className='md:pl-10 pl-1'>
-                        very creative
+                        Very creative
                       </span>
                     </span>
                   </span>
                   <span className='block md:text-2xl text-basse pt-5'>
                     <span className='flex flex-row '>
-                      <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' />
+                      {/* <Plus className='md:h-7 md:w-7 h-0 w-4 inline mr-2 absolute' /> */}
                       <span className='md:pl-10 pl-1'>
-                        Experience in visualizing concepts in draw.io and miroboards
+                        Much passion
                       </span>
                     </span>
                   </span>
