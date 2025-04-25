@@ -38,7 +38,7 @@ export default function windowWorld(){
   };
 
     return(
-        <div className='bg-red-700 h-screen w-screen'>
+        <div className='bg-[rgb(255,0,0)] h-screen w-screen'>
             <Introduction/>
         </div>
     )
