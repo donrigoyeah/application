@@ -18,12 +18,12 @@ export default function windowWorld(){
                     {isInfoOpen ? "Close Info" : "Open Info"}
                     </button>
             </div>
-            <div>
+            {/* <div>
                 <span  className='h-10 w-10 rounded-full bg-white absolute left-5 top-5'/>
                 <span  className='h-10 w-10 rounded-full bg-white absolute right-5 top-5'/>
                 <span  className='h-10 w-10 rounded-full bg-white absolute left-5 bottom-5'/>
                 <span  className='h-10 w-10 rounded-full bg-white absolute right-5 bottom-5'/>
-            </div>
+            </div> */}
             <div className='self-center'>
                 {isInfoOpen ?             
                     <div className='flex flex-col text-center bg-white p-4 rounded-xl'>
