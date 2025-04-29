@@ -12,11 +12,17 @@ export default function windowWorld(){
     };
 
     return (
-        <div className='flex items-center flex-col justify-evenly h-screen'>
-            <div className='self-center'>
-                <button className='p-4 bg-white self-center rounded-xl text-xl'onClick={toggleInfo}>
+        <div className='w-screen h-screen flex flex-col items-center'>
+            <div className='py-12'>
+                <button className='p-4 bg-[rgb(255,0,0)] border-white border-2 text-white self-center rounded-xl text-xl'onClick={toggleInfo}>
                     {isInfoOpen ? "Close Info" : "Open Info"}
                     </button>
+            </div>
+            <div>
+                <span  className='h-10 w-10 rounded-full bg-white absolute left-5 top-5'/>
+                <span  className='h-10 w-10 rounded-full bg-white absolute right-5 top-5'/>
+                <span  className='h-10 w-10 rounded-full bg-white absolute left-5 bottom-5'/>
+                <span  className='h-10 w-10 rounded-full bg-white absolute right-5 bottom-5'/>
             </div>
             <div className='self-center'>
                 {isInfoOpen ?             
