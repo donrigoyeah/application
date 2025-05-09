@@ -12,7 +12,7 @@ export default function windowWorld(){
     };
 
     return (
-        <div className='h-screen w-screen flex flex-col items-center'>
+        <div className='h-dvh w-dvw flex flex-col items-center'>
             <div className='py-12'>
                 <button className='p-4 bg-[rgb(255,0,0)] border-white border-2 text-white self-center rounded-xl text-xl'onClick={toggleInfo}>
                     {isInfoOpen ? "Close Info" : "Open Info"}
@@ -44,8 +44,9 @@ export default function windowWorld(){
   };
 
     return(
-    <div className="h-dvh w-screen flex items-stretch">
-        <div className="bg-[rgb(255,0,0)] border-[rgb(0,255,0)] border-[20px] h-full">
+        //flex items-stretch
+    <div className="h-screen w-screen">
+        <div className="bg-[rgb(255,0,0)] border-[rgb(0,255,0)] border-[20px] h-full w-full">
             <Introduction />
         </div>
     </div>
