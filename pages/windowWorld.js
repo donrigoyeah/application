@@ -44,7 +44,7 @@ export default function windowWorld(){
   };
 
     return(
-        <div className='bg-[rgb(255,0,0)] h-screen w-screen flex items-center justify-center border-[rgb(0,255,0)] border-[25px]'>
+        <div className='bg-[rgb(255,0,0)] h-dvh w-dvw flex items-center justify-center border-[rgb(0,255,0)] border-[25px]'>
             <Introduction/>
         </div>
     )
