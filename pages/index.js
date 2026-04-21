@@ -206,7 +206,7 @@ export default function Home() {
             <div className='md:col-span-6 col-span-12'>
               <div className='md:h-2/4 bg-primary flex flex-col items-left z-10 p-8'>
                 <div className='flex md:h-0 h-1/3 md:py-20 py-4 pl-10 w-full justify-center md:hidden'>
-                  <h1 className='md:text-7xl text-5xl text-center'>Söbastian Rieger</h1>
+                  <h1 className='md:text-7xl text-5xl text-center'>Sebastian Rieger</h1>
                 </div>
                 <div className='md:flex md:h-2/4 h-0 overflow-hidden'>
                   <span className='text-8xl hover:text-5xl transition-all'>S</span>
