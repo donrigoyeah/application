@@ -59,7 +59,7 @@ export default function Home() {
   const [codeAccepted, setCodeAccepted] = useState(false);
   const [showPage, setShowPage] = useState(false);
   const [screenWidth, setScreenWidth] = useState(0);
-  const code = '1000$coolBeans';
+  const code = '5';
 
   useEffect(() => {
     if ('undefined' != typeof window) {
@@ -112,7 +112,7 @@ export default function Home() {
           className='grid grid-cols-3 justify-center items-center pt-12 md:pt-24 lg:pt-36'
         >
            <div className='flex w-full justify-center p-4'>
-            <p className='text-xs'>The code is: 1000$cool</p>
+            <p className='text-xs'>The code is: 2 plus 3</p>
             <p className='text-xs'>Beans</p>
           </div>
           <input
