@@ -670,6 +670,21 @@ export default function Home() {
                           </a>
                         </td>
                       </tr>
+                       <tr className='md:text-2xl text-lg relative block'>
+                        <td className='absolute -left-10 w-10 h-[2px] top-[40%] bg-black'>
+                          &nbsp;
+                        </td>
+                        <td className='pl-4'>
+                          <a
+                            href='https://lebenszeitpflege.de/koeln-persoenliche-assistenz-assistenzpflege/'
+                            target='_blank'
+                            rel='noreferrer'
+                            className='hover:underline hover:text-secondary'
+                          >
+                            2025 Personal Assistence
+                          </a>
+                        </td>
+                      </tr>
                     </tbody>
                   </table>
                 </MouseParallaxContainer>
@@ -1446,8 +1461,8 @@ const gameProjects = [
         describtion:
           'A spherical tetris game for mobile devices. Random generated pieces (3 blocked) fall from the top onto a circle. The player controls the sphere by rotating it and can flip the falling pieces. If a row is filled entirely, the blocks will disolve.The more points you get, the faster they fall. This game includes an intricated gamestate-system and an approach to a simple solution to a tricky visual challenge. It gets very intense.',
         goal: 'Developing another casual game and finish it.',
-        duration: '2 Weeks',
-        percentage: 90,
+        duration: '1 Weekend',
+        percentage: 100,
         ownRating: 4,
         conclusion:
           'This project was done with a friend of mine during a long weekend. I took a week off work and designed, planed and developed this masterpiece, all while teaching my firend Unity as good as i could. There are still many rough edges on some of the game mechanics and the visuals are far from user-friendly, but an enjoyable title nonetheless. Good vibes & good times. Shout out to eMCeeS',
@@ -1460,6 +1475,24 @@ const gameProjects = [
       },
       {
         title: 'Democracy is (no) joke',
+        subtitle: 'Strategy game',
+        link: 'https://zwiebelzitrone.itch.io/democracy-is-no-joke',
+        describtion:
+          'You play as the leader of a population of 100 people and your goal is to be reelected for the next term. The population can be analysed on their political ideas, gender, age, religion and their general attitude towards their leader. In a round you have to answer a certain amount of questions regarding hot topics. These "spicey" questions are splitting the population so you need to decide on which group of people to favor. The catch: the happier the people are, the less likely they are going to vote. Can you beat the system and safe your next term?',
+        goal: 'Having fun at the 2024 demographic game jam at the cologne game lab.',
+        duration: '2 Days',
+        percentage: 90,
+        ownRating: 5,
+        conclusion: 'I pitched my design idea to the jam participants and found people who liked to joined me on this. It was a great weekend and we created a very modular system the could be extended on. Overall: Fun, fun & fun',
+        images: [
+          '/assets/images/games/democray1.png',
+          '/assets/images/games/democracy2.png',
+          '/assets/images/games/democracy3.png',
+          '/assets/images/games/democracy4.png',
+        ],
+      },
+      {
+        title: 'How much is the ',
         subtitle: 'Strategy game',
         link: 'https://zwiebelzitrone.itch.io/democracy-is-no-joke',
         describtion:
@@ -1533,24 +1566,24 @@ const gameProjects = [
           '/assets/images/games/PlanetB4.png',
         ],
       },
-      {
-        title: 'Cubit',
-        subtitle: '3D Puzzler',
-        link: "https://zwiebelzitrone.itch.io/cubid",
-        describtion:
-          'Cubit is a 3D Puzzler, where the player can tilt a large cube and with that move the small cubit on its surface. It is not physics-based, but instead includes stable game state that does the calculation. The game includes a "normal" quest mode, where in XX levels new hazards and blocks are introduced. In the rush mode the player has to clear as many levels as possible in a fixed time duration, with ever increasing complexity of the generated levels. Lastly is the level-editor, where players can create their own maps and share them as json files.',
-        goal: 'Recreate the mechanic of tilting the big cubit that results in the correct movement of the cubit. The transition between faces should be fluid and correct. An integration to a server, where people can share their own levels would be amazing.',
-        duration: '3 Month',
-        percentage: 65,
-        ownRating: 5,
-        conclusion: 'The seemingly easy mechanic turned out to be extremly complex to code. A lot of hard coding was implemented. It feels like a good working proof-of-concept. Overall very exciting since i could not find this mechanics anywhere else. Rotation can be unforgiving and intransparent. Refactoring this would be wise...',
-        images: [
-          '/assets/images/games/cubit1.png',
-          '/assets/images/games/cubit2.png',
-          '/assets/images/games/cubit3.png',
-          '/assets/images/games/cubit4.png',
-        ],
-      },
+      // {
+      //   title: 'Cubit',
+      //   subtitle: '3D Puzzler',
+      //   link: "https://zwiebelzitrone.itch.io/cubid",
+      //   describtion:
+      //     'Cubit is a 3D Puzzler, where the player can tilt a large cube and with that move the small cubit on its surface. It is not physics-based, but instead includes stable game state that does the calculation. The game includes a "normal" quest mode, where in XX levels new hazards and blocks are introduced. In the rush mode the player has to clear as many levels as possible in a fixed time duration, with ever increasing complexity of the generated levels. Lastly is the level-editor, where players can create their own maps and share them as json files.',
+      //   goal: 'Recreate the mechanic of tilting the big cubit that results in the correct movement of the cubit. The transition between faces should be fluid and correct. An integration to a server, where people can share their own levels would be amazing.',
+      //   duration: '3 Month',
+      //   percentage: 65,
+      //   ownRating: 5,
+      //   conclusion: 'The seemingly easy mechanic turned out to be extremly complex to code. A lot of hard coding was implemented. It feels like a good working proof-of-concept. Overall very exciting since i could not find this mechanics anywhere else. Rotation can be unforgiving and intransparent. Refactoring this would be wise...',
+      //   images: [
+      //     '/assets/images/games/cubit1.png',
+      //     '/assets/images/games/cubit2.png',
+      //     '/assets/images/games/cubit3.png',
+      //     '/assets/images/games/cubit4.png',
+      //   ],
+      // },
       {
         title: 'Onio',
         subtitle: '3rd Person Exploration Adventures',
@@ -1584,6 +1617,24 @@ const gameProjects = [
           '/assets/images/games/TLM_2.png',
           '/assets/images/games/TLM_3.png',
           '/assets/images/games/TLM_4.png',
+        ],
+      },
+      {
+        title: 'R.O.P.A Gunned Up',
+        subtitle: 'Interactive news casting experience',
+        // link:"https://zwiebelzitrone.itch.io/tlm",
+        describtion:
+          'The player gets "selected" to be a new newscaster for the national tv show. Before going live, the player needs to learn how to use the "correct" wording for the stories - ensuring the nationals viewpoint. Afterwards the player reads the news from a telepromter where hackers have managed to show different choice for sensitive words changing the meaning behind the stories. In the last step the players are confronted with the actual real life news stories, how the individual news channels presented them, and how the player read them',
+        goal: 'Teaching people about propaganda and framing of stories based on political interests',
+        duration: '2 Month',
+        percentage: 90,
+        ownRating: 5,
+        conclusion: 'For the fourth project phase at CGL we had to create an experimental experience. Using the players voice as input and validating their choices in realtime was challenging. With an introduction (brainwashing phase), the main telepromter scene, as well as the reflection phase, the players data, name, the actual wording they used, both neededd to be send to the refelcting instance.', 
+        images: [
+          '/assets/images/games/ropa2.png',
+          '/assets/images/games/ropa3.png',
+          '/assets/images/games/ropa1.png',
+          '/assets/images/games/ropa4.png',
         ],
       }
     ],
