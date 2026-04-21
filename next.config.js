@@ -1,10 +1,6 @@
-module.exports = {
-  output: 'export',
-
-  basePath: '/application',
-  assetPrefix: '/application/',
-
-  images: {
-    unoptimized: true,
-  },
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
 };
+
+module.exports = nextConfig;
