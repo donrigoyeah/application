@@ -185,7 +185,7 @@ export default function Home() {
               <Wobble>
                 <div className='absoulte w-[800px] h-[800px] overflow-hidden'>
                   <Image
-                    src='/assets/images/profilePicCut.png'
+                    src='assets/images/profilePicCut.png'
                     alt='Profile picture'
                     width={500}
                     height={500}
