@@ -113,7 +113,6 @@ export default function Home() {
         >
            <div className='flex w-full justify-center p-4'>
             <p className='text-xs'>The code is: 2 plus 3</p>
-            <p className='text-xs'>Beans</p>
           </div>
           <input
             type='text'
