@@ -814,7 +814,7 @@ export default function Home() {
               )}
             ></div>
           </div>
-          <div className=''>
+          <div className=''>  {/* ----------------------------------------------------Game Projects */}
             <div className='grid grid-cols-12'>
               {gameProjects.map((item, index) => (
                 <a
@@ -1111,7 +1111,7 @@ const gameProjects = [
       '/assets/images/games/galaxyshooter3.png',
       '/assets/images/games/galaxyshooter4.png',
     ],
-  },
+  }, // Galaxy Shooter
   {
     title: 'Mobile Dungeon',
     subtitle: '3rd Person Action Adventue',
@@ -1149,7 +1149,7 @@ const gameProjects = [
       '/assets/images/games/mobiledungeon2.png',
       '/assets/images/games/mobiledungeon4.png',
     ],
-  },
+  }, // Mobile Dungeon
   {
     title: 'NutExpress',
     subtitle: '3rd Squirrel Adventure',
@@ -1187,7 +1187,7 @@ const gameProjects = [
       '/assets/images/games/NutExp3.png',
       '/assets/images/games/NutExp4.png',
     ],
-  },
+  }, // NutExpress
   {
     title: 'Spheris',
     subtitle: 'Spherical Space Tetris',
@@ -1204,7 +1204,7 @@ const gameProjects = [
       '/assets/images/games/spheris3.png',
       '/assets/images/games/spheris4.png',
     ],
-  },
+  }, // Spheris
   {
     title: 'Solaris',
     subtitle: '3rd Person Rougelike Base Builder & Shooter',
@@ -1221,7 +1221,7 @@ const gameProjects = [
       '/assets/images/games/solaris3.png',
       '/assets/images/games/solaris4.png',
     ],
-  },
+  }, // Solaris
   {
     title: 'Spirit Mask',
     subtitle: '3rd Person Rougelike Online Action Adventures',
@@ -1237,7 +1237,7 @@ const gameProjects = [
       '/assets/images/games/sm3.jpg',
       '/assets/images/games/sm4.jpg',
     ],
-  },
+  }, //Spirit Mask
 ];
 
 // const PreloadedImage = preloadImage("https://via.placeholder.com/700x500");
