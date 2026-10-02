@@ -563,10 +563,22 @@ export default function Home() {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr className='text-2xl'>
-                        <td> &nbsp;</td>
+                     <tr className='md:text-2xl text-lg relative block'>
+                        <td className='absolute -left-10 w-10 h-[2px] top-[40%] bg-black'>
+                          &nbsp;
+                        </td>
+                        <td className='pl-4'>
+                          <a
+                            href='https://solingen.branchen-info.net/baumschule-muench/1098510/'
+                            target='_blank'
+                            rel='noreferrer'
+                            className='hover:text-secondary transition-all duration-500'
+                          >
+                            2000 Gardening
+                          </a>
+                        </td>
                       </tr>
-                      <tr className='text-2xl'>
+                                <tr className='text-2xl'>
                         <td> &nbsp;</td>
                       </tr>
                       <tr className='md:text-2xl text-lg relative block'>
@@ -634,7 +646,7 @@ export default function Home() {
                             rel='noreferrer'
                             className='hover:text-secondary transition-all duration-500'
                           >
-                            2020 Mexican Food Cook
+                            2020 Cook
                           </a>
                         </td>
                       </tr>
@@ -649,7 +661,7 @@ export default function Home() {
                             rel='noreferrer'
                             className='hover:text-secondary transition-all duration-500'
                           >
-                            2021 Web Developer
+                            2021 Software Developer
                           </a>
                         </td>
                       </tr>
