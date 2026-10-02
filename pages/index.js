@@ -15,6 +15,7 @@ import {
   Music,
   Plus,
   Send,
+  Save,
   Terminal,
   Tv,
   Zap,
@@ -138,7 +139,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Sebastian Rieger Portfolio</title>
+        <title>Zwiebel + Zitrone</title>
         <meta name='description' content='Portfolio website of Sebastian Rieger' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
@@ -341,30 +342,31 @@ export default function Home() {
             </div>
             <div className='md:col-span-3 col-span-4 bg-secondary h-full rounded-br-2xl md:p-10 p-2 flex flex-col'>
               <h2 className='md:text-4xl text-xl font-bold'>Find me</h2>
-              <span className='md:text-2xl text-base h-9 my-4 transition-all duration-500'>
+              <span className='md:text-2xl text-base h-9 my-4 transition-all duration-500 hover:text-fourth'>
                 <a
                   href='https://www.openstreetmap.org/#map=16/50.9460/6.9522'
                   target='_blank'
                   rel='noreferrer'
                 >
                   <MapPin className='md:inline md:h-6 h-3 md:w-6 w-3 mr-3' />
-                  Cologne, Germany
+                  Cologne
                 </a>
               </span>
-              <span className='md:text-2xl text-base h-9 my-4 transition-all duration-500'>
-                <a href='"mailto:rieger.geo@gmail.com"'>
+              <span className='md:text-2xl text-base h-9 my-4 transition-all duration-500 hover:text-fourth'>
+                <a href='"mailto:zwiebel-zitrone@posteo.com"'>
                   <Send className='md:inline md:h-6 h-3 md:w-6 w-3 mr-3' />
-                  <span>rieger.geo @gmail.com</span>
+                  <span>Mail</span>
                 </a>
               </span>
-              <span className='md:text-2xl text-base h-9 my-4 transition-all duration-500'>
+              <span className='md:text-2xl text-base h-9 my-4 transition-all duration-500 hover:text-fourth'>
                 <a
                   href='https://zwiebelzitrone.itch.io/'
                   target='_blank'
                   rel='noreferrer'
-                  className='md:flex md:flex-nowrap'
+                  // className='md:flex md:flex-nowrap'
                 >
-                  <div className='md:inline md:h-6 h-3 md:w-6 w-3 mr-3'>
+                <Save className='md:inline md:h-6 h-3 md:w-6 w-3 mr-3' />
+                  {/* <div className='md:inline md:h-6 h-3 md:w-6 w-3 mr-3'>
                     <Image
                         src='/assets/svg/itch.svg'
                         // objectFit="cover"
@@ -373,9 +375,9 @@ export default function Home() {
                         width={50}
                         alt='itch io logo'
                       />
-                  </div>
+                  </div> */}
                   {/* <GitHub className='md:inline md:h-6 h-3 md:w-6 w-3 mr-3' /> */}
-                  <span>Zwiebel+Zitrone</span>
+                  <span>Itch.io</span>
                 </a>
               </span>
             </div>
@@ -430,7 +432,7 @@ export default function Home() {
                             href='https://www.edgerton.k12.oh.us/'
                             target='_blank'
                             rel='noreferrer'
-                            className='hover:underline hover:text-fourth'
+                            className='hover:text-fourth transition-all duration-500'
                           >
                             Student Exchange USA 2006
                           </a>
@@ -445,7 +447,7 @@ export default function Home() {
                             href='https://www.gymnasium-leichlingen.de/'
                             target='_blank'
                             rel='noreferrer'
-                            className='hover:underline hover:text-fourth'
+                            className='hover:text-fourth transition-all duration-500'
                           >
                             Highschool Diploma 2009
                           </a>
@@ -463,7 +465,7 @@ export default function Home() {
                             href='https://igce.rc.unesp.br/index.php#!/instituicao/diretoria-tecnica-academica/graduacao/cursos/geologia/'
                             target='_blank'
                             rel='noreferrer'
-                            className='hover:underline hover:text-fourth'
+                            className='hover:text-fourth transition-all duration-500'
                           >
                             Intercambio Brazil 2014
                           </a>
@@ -478,7 +480,7 @@ export default function Home() {
                             href='https://www.uni-heidelberg.de/de/studium/alle-studienfaecher/geowissenschaften'
                             target='_blank'
                             rel='noreferrer'
-                            className='hover:underline hover:text-fourth'
+                            className='hover:text-fourth transition-all duration-500'
                           >
                             B.Sc. Geology 2015
                           </a>
@@ -499,7 +501,7 @@ export default function Home() {
                             href='https://www.ifg.uni-kiel.de/de/studium-1/m-sc-geophysik'
                             target='_blank'
                             rel='noreferrer'
-                            className='hover:underline hover:text-fourth'
+                            className='hover:text-fourth transition-all duration-500'
                           >
                             M.Sc. Geophysics 2019
                           </a>
@@ -520,7 +522,7 @@ export default function Home() {
                             href='https://colognegamelab.de/'
                             target='_blank'
                             rel='noreferrer'
-                            className='hover:underline hover:text-fourth'
+                            className='hover:text-fourth transition-all duration-500'
                           >
                             B.A. Digital Games 2023
                           </a>
@@ -576,7 +578,7 @@ export default function Home() {
                             href='https://www.topuniversities.com/blog/working-while-you-study-common-student-jobs'
                             target='_blank'
                             rel='noreferrer'
-                            className='hover:underline hover:text-secondary'
+                            className='hover:text-secondary transition-all duration-500'
                           >
                             2011 Student Jobs
                           </a>
@@ -597,7 +599,7 @@ export default function Home() {
                             href='https://kiel.casino-sh.de/startseite.html'
                             target='_blank'
                             rel='noreferrer'
-                            className='hover:underline hover:text-secondary'
+                            className='hover:text-secondary transition-all duration-500'
                           >
                             2017 Poker Dealer
                           </a>
@@ -612,7 +614,7 @@ export default function Home() {
                             href='https://gsb.sh/'
                             target='_blank'
                             rel='noreferrer'
-                            className='hover:underline hover:text-secondary'
+                            className='hover:text-secondary transition-all duration-500'
                           >
                             2018 Geologist
                           </a>
@@ -630,7 +632,7 @@ export default function Home() {
                             href='https://de.restaurantguru.com/Maria-Bonita-Kiel'
                             target='_blank'
                             rel='noreferrer'
-                            className='hover:underline hover:text-secondary'
+                            className='hover:text-secondary transition-all duration-500'
                           >
                             2020 Mexican Food Cook
                           </a>
@@ -645,7 +647,7 @@ export default function Home() {
                             href='https://networkteam.com/'
                             target='_blank'
                             rel='noreferrer'
-                            className='hover:underline hover:text-secondary'
+                            className='hover:text-secondary transition-all duration-500'
                           >
                             2021 Web Developer
                           </a>
@@ -663,7 +665,7 @@ export default function Home() {
                             href='https://www.kununu.com/de/appmatics'
                             target='_blank'
                             rel='noreferrer'
-                            className='hover:underline hover:text-secondary'
+                            className='hover:text-secondary transition-all duration-500'
                           >
                             2024 Test Automatization Engineer
                           </a>
@@ -678,7 +680,7 @@ export default function Home() {
                             href='https://lebenszeitpflege.de/koeln-persoenliche-assistenz-assistenzpflege/'
                             target='_blank'
                             rel='noreferrer'
-                            className='hover:underline hover:text-secondary'
+                            className='hover:text-secondary transition-all duration-500'
                           >
                             2025 Personal Assistence
                           </a>
@@ -1453,6 +1455,24 @@ const gameProjects = [
           '/assets/images/games/NutExp4.png',
         ],
       },
+        {
+        title: 'Solaris',
+        subtitle: '3rd Person Rougelike Base Builder & Shooter',
+        describtion:
+          'You are an AI and tasked with retrieving artifact from islands research facility. A virus infected all wildlife making them dangerous enemies. Other AIs are on the same mission as you so you have to hurry. You need to build your base, gather resources and generate energy. The energy is the main resource that similar to stamina, replenishes during the day/clear weather, but is used from batteries during the night. This energy management is the main gameloop and oversight are necesseray for the basebuilding, exploration and combat. Dynamic wheater and a day/night cycle require different energy sources. Additionaly, the longer you stay on this planet, the more aggresive the enviroment becomes...',
+        goal: 'Create a more complex game with different gameplay mechanics. Building structures, gather resources, switch vehicles and an interesting world to explore. Also try to learn shaders.',
+        duration: 'Paused after 2 Month',
+        percentage: 20,
+        ownRating: 5,
+        conclusion:
+          'Unfortunatly a too ambitious project to do alone while working a regual job. A project i would love to continue working on if the resources are available.',
+        images: [
+          '/assets/images/games/solaris1.png',
+          '/assets/images/games/solaris2.png',
+          '/assets/images/games/solaris3.png',
+          '/assets/images/games/solaris4.png',
+        ],
+      },
       {
         title: 'Spheris',
         subtitle: 'Spherical Space Tetris',
@@ -1490,42 +1510,24 @@ const gameProjects = [
           '/assets/images/games/democracy4.png',
         ],
       },
-      {
-        title: 'How much is the ',
-        subtitle: 'Strategy game',
-        link: 'https://zwiebelzitrone.itch.io/democracy-is-no-joke',
-        describtion:
-          'You play as the leader of a population of 100 people and your goal is to be reelected for the next term. The population can be analysed on their political ideas, gender, age, religion and their general attitude towards their leader. In a round you have to answer a certain amount of questions regarding hot topics. These "spicey" questions are splitting the population so you need to decide on which group of people to favor. The catch: the happier the people are, the less likely they are going to vote. Can you beat the system and safe your next term?',
-        goal: 'Having fun at the 2024 demographic game jam at the cologne game lab.',
-        duration: '2 Days',
-        percentage: 90,
-        ownRating: 5,
-        conclusion: 'I pitched my design idea to the jam participants and found people who liked to joined me on this. It was a great weekend and we created a very modular system the could be extended on. Overall: Fun, fun & fun',
-        images: [
-          '/assets/images/games/democray1.png',
-          '/assets/images/games/democracy2.png',
-          '/assets/images/games/democracy3.png',
-          '/assets/images/games/democracy4.png',
-        ],
-      }
       // {
-      //   title: 'Solaris',
-      //   subtitle: '3rd Person Rougelike Base Builder & Shooter',
+      //   title: 'How much is the ',
+      //   subtitle: 'Strategy game',
+      //   link: 'https://zwiebelzitrone.itch.io/democracy-is-no-joke',
       //   describtion:
-      //     'You are an AI and tasked with retrieving artifact from islands research facility. A virus infected all wildlife making them dangerous enemies. Other AIs are on the same mission as you so you have to hurry. You need to build your base, gather resources and generate energy. The energy is the main resource that similar to stamina, replenishes during the day/clear weather, but is used from batteries during the night. This energy management is the main gameloop and oversight are necesseray for the basebuilding, exploration and combat. Dynamic wheater and a day/night cycle require different energy sources. Additionaly, the longer you stay on this planet, the more aggresive the enviroment becomes...',
-      //   goal: 'Create a more complex game with different gameplay mechanics. Building structures, gather resources, switch vehicles and an interesting world to explore. Also try to learn shaders.',
-      //   duration: 'Paused after 2 Month',
-      //   percentage: 20,
+      //     'You play as the leader of a population of 100 people and your goal is to be reelected for the next term. The population can be analysed on their political ideas, gender, age, religion and their general attitude towards their leader. In a round you have to answer a certain amount of questions regarding hot topics. These "spicey" questions are splitting the population so you need to decide on which group of people to favor. The catch: the happier the people are, the less likely they are going to vote. Can you beat the system and safe your next term?',
+      //   goal: 'Having fun at the 2024 demographic game jam at the cologne game lab.',
+      //   duration: '2 Days',
+      //   percentage: 90,
       //   ownRating: 5,
-      //   conclusion:
-      //     'Unfortunatly a too ambitious project to do alone while working a regual job. A project i would love to continue working on if the resources are available.',
+      //   conclusion: 'I pitched my design idea to the jam participants and found people who liked to joined me on this. It was a great weekend and we created a very modular system the could be extended on. Overall: Fun, fun & fun',
       //   images: [
-      //     '/assets/images/games/solaris1.png',
-      //     '/assets/images/games/solaris2.png',
-      //     '/assets/images/games/solaris3.png',
-      //     '/assets/images/games/solaris4.png',
+      //     '/assets/images/games/democray1.png',
+      //     '/assets/images/games/democracy2.png',
+      //     '/assets/images/games/democracy3.png',
+      //     '/assets/images/games/democracy4.png',
       //   ],
-      // },
+      // }
       // {
       //   title: 'Spirit Mask',
       //   subtitle: '3rd Person Rougelike Online Action Adventures',
