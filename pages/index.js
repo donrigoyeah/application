@@ -416,123 +416,140 @@ export default function Home() {
                     className='absolute md:left-1/4 md:top-1/4 top-4 left-0'
                     resetOnLeave
                   >
-                    <Feather className='w-40 h-40 text-third' />
+                    <Feather className='md:w-40 w-20 md:h-40 h-20 text-third' />
                   </MouseParallaxChild>
-                  <table className='w-full r-0'>
+                 <table className="w-full">
                     <thead>
-                      <tr className='flex flex-col relative mb-5'>
-                        <td className='md:text-5xl text-2xl pb-5 font-bold'>Education</td>
-                        {/* <td className='absolute h-0.5 bg-black w-96 block -right-10 bottom-2'></td> */}
+                      <tr className="relative mb-5">
+                        <th className="text-left md:text-5xl text-2xl pb-5 font-bold">
+                          Education
+                        </th>
                       </tr>
                     </thead>
+
                     <tbody>
-                      <tr className='md:text-2xl text-lg relative '>
-                        <td className='pr-4'>
+                      <tr className="md:text-2xl text-lg relative">
+                        <td className="pr-4">
                           <a
-                            href='https://www.edgerton.k12.oh.us/'
-                            target='_blank'
-                            rel='noreferrer'
-                            className='hover:text-fourth transition-all duration-500'
+                            href="https://www.edgerton.k12.oh.us/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="hover:text-fourth transition-all duration-500"
                           >
                             Student Exchange USA 2006
                           </a>
                         </td>
-                        <td className='absolute -right-10 w-10 h-[2px] top-[40%] bg-black'>
+                        <td className="absolute -right-10 w-10 h-[2px] top-[40%] bg-black">
                           &nbsp;
                         </td>
                       </tr>
-                      <tr className='md:text-2xl text-lg relative '>
-                        <td className='pr-4'>
+
+                      <tr className="md:text-2xl text-lg relative">
+                        <td className="pr-4">
                           <a
-                            href='https://www.gymnasium-leichlingen.de/'
-                            target='_blank'
-                            rel='noreferrer'
-                            className='hover:text-fourth transition-all duration-500'
+                            href="https://www.gymnasium-leichlingen.de/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="hover:text-fourth transition-all duration-500"
                           >
                             Highschool Diploma 2009
                           </a>
                         </td>
-                        <td className='absolute -right-10 w-10 h-[2px] top-[40%] bg-black'>
+                        <td className="absolute -right-10 w-10 h-[2px] top-[40%] bg-black">
                           &nbsp;
                         </td>
                       </tr>
-                      <tr className='text-2xl'>
-                        <td> &nbsp;</td>
+
+                      <tr aria-hidden="true">
+                        <td className="md:h-8 h-6">&nbsp;</td>
                       </tr>
-                      <tr className='md:text-2xl text-lg relative '>
-                        <td className='pr-4'>
+
+                      <tr className="md:text-2xl text-lg relative">
+                        <td className="pr-4">
                           <a
-                            href='https://igce.rc.unesp.br/index.php#!/instituicao/diretoria-tecnica-academica/graduacao/cursos/geologia/'
-                            target='_blank'
-                            rel='noreferrer'
-                            className='hover:text-fourth transition-all duration-500'
+                            href="https://igce.rc.unesp.br/index.php#!/instituicao/diretoria-tecnica-academica/graduacao/cursos/geologia/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="hover:text-fourth transition-all duration-500"
                           >
                             Intercambio Brazil 2014
                           </a>
                         </td>
-                        <td className='absolute -right-10 w-10 h-[2px] top-[40%] bg-black'>
+                        <td className="absolute -right-10 w-10 h-[2px] top-[40%] bg-black">
                           &nbsp;
                         </td>
                       </tr>
-                      <tr className='md:text-2xl text-lg relative '>
-                        <td className='pr-4'>
+
+                      <tr className="md:text-2xl text-lg relative">
+                        <td className="pr-4">
                           <a
-                            href='https://www.uni-heidelberg.de/de/studium/alle-studienfaecher/geowissenschaften'
-                            target='_blank'
-                            rel='noreferrer'
-                            className='hover:text-fourth transition-all duration-500'
+                            href="https://www.uni-heidelberg.de/de/studium/alle-studienfaecher/geowissenschaften"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="hover:text-fourth transition-all duration-500"
                           >
                             B.Sc. Geology 2015
                           </a>
                         </td>
-                        <td className='absolute -right-10 w-10 h-[2px] top-[40%] bg-black'>
+                        <td className="absolute -right-10 w-10 h-[2px] top-[40%] bg-black">
                           &nbsp;
                         </td>
                       </tr>
-                      <tr className='text-2xl'>
-                        <td> &nbsp;</td>
+
+                      <tr aria-hidden="true">
+                        <td className="md:h-8 h-6">&nbsp;</td>
                       </tr>
-                      <tr className='text-2xl'>
-                        <td> &nbsp;</td>
+
+                      <tr aria-hidden="true">
+                        <td className="md:h-8 h-6">&nbsp;</td>
                       </tr>
-                      <tr className='md:text-2xl text-lg relative '>
-                        <td className='pr-4'>
+
+                      <tr className="md:text-2xl text-lg relative">
+                        <td className="pr-4">
                           <a
-                            href='https://www.ifg.uni-kiel.de/de/studium-1/m-sc-geophysik'
-                            target='_blank'
-                            rel='noreferrer'
-                            className='hover:text-fourth transition-all duration-500'
+                            href="https://www.ifg.uni-kiel.de/de/studium-1/m-sc-geophysik"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="hover:text-fourth transition-all duration-500"
                           >
                             M.Sc. Geophysics 2019
                           </a>
                         </td>
-                        <td className='absolute -right-10 w-10 h-[2px] top-[40%] bg-black'>
+                        <td className="absolute -right-10 w-10 h-[2px] top-[40%] bg-black">
                           &nbsp;
                         </td>
                       </tr>
-                      <tr className='text-2xl'>
-                        <td> &nbsp;</td>
+
+                      <tr aria-hidden="true">
+                        <td className="md:h-8 h-6">&nbsp;</td>
                       </tr>
-                      <tr className='text-2xl'>
-                        <td>&nbsp;</td>
+
+                      <tr aria-hidden="true">
+                        <td className="md:h-8 h-6">&nbsp;</td>
                       </tr>
-                      <tr className='md:text-2xl text-lg relative '>
-                        <td className='pr-4'>
+
+                      <tr className="md:text-2xl text-lg relative">
+                        <td className="pr-4">
                           <a
-                            href='https://colognegamelab.de/'
-                            target='_blank'
-                            rel='noreferrer'
-                            className='hover:text-fourth transition-all duration-500'
+                            href="https://colognegamelab.de/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="hover:text-fourth transition-all duration-500"
                           >
                             B.A. Digital Games 2023
                           </a>
                         </td>
-                        <td className='absolute -right-10 w-10 h-[2px] top-[40%] bg-black'>
+                        <td className="absolute -right-10 w-10 h-[2px] top-[40%] bg-black">
                           &nbsp;
                         </td>
                       </tr>
-                      <tr className='text-2xl'>
-                        <td> &nbsp;</td>
+                      
+                      <tr aria-hidden="true">
+                        <td className="md:h-8 h-6">&nbsp;</td>
+                      </tr>
+                      
+                      <tr aria-hidden="true">
+                        <td className="md:h-8 h-6">&nbsp;</td>
                       </tr>
                     </tbody>
                   </table>
@@ -553,149 +570,165 @@ export default function Home() {
                     className='absolute md:right-1/4 right-0 md:top-1/4 top-4'
                     resetOnLeave
                   >
-                    <DollarSign className='w-40 h-40 text-third' />
+                    <DollarSign className='md:w-40 w-20 md:h-40 h-20 text-third' />
                   </MouseParallaxChild>
-                  <table className=''>
+                <table className="w-full">
                     <thead>
-                      <tr className='flex flex-col relative mb-5'>
-                        <td className='md:text-5xl text-2xl pb-5 font-bold'>Work</td>
-                        {/* <td className='absolute h-0.5 bg-black w-96 block -left-10 bottom-2'></td> */}
+                      <tr className="relative mb-5">
+                        <th className="text-left md:text-5xl text-2xl pb-5 font-bold">
+                          Work
+                        </th>
                       </tr>
                     </thead>
+
                     <tbody>
-                     <tr className='md:text-2xl text-lg relative block'>
-                        <td className='absolute -left-10 w-10 h-[2px] top-[40%] bg-black'>
-                          &nbsp;
-                        </td>
-                        <td className='pl-4'>
+                      <tr className="md:text-2xl text-lg relative">
+                        <td className="pl-4">
                           <a
-                            href='https://solingen.branchen-info.net/baumschule-muench/1098510/'
-                            target='_blank'
-                            rel='noreferrer'
-                            className='hover:text-secondary transition-all duration-500'
+                            href="https://solingen.branchen-info.net/baumschule-muench/1098510/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="hover:text-secondary transition-all duration-500"
                           >
                             2000 Gardening
                           </a>
                         </td>
-                      </tr>
-                                <tr className='text-2xl'>
-                        <td> &nbsp;</td>
-                      </tr>
-                      <tr className='md:text-2xl text-lg relative block'>
-                        <td className='absolute -left-10 w-10 h-[2px] top-[40%] bg-black'>
+                        <td className="absolute -left-10 w-10 h-[2px] top-[40%] bg-black">
                           &nbsp;
                         </td>
-                        <td className='pl-4'>
+                      </tr>
+
+                      <tr aria-hidden="true">
+                        <td className="md:h-8 h-6">&nbsp;</td>
+                      </tr>
+
+                      <tr className="md:text-2xl text-lg relative">
+                        <td className="pl-4">
                           <a
-                            href='https://www.topuniversities.com/blog/working-while-you-study-common-student-jobs'
-                            target='_blank'
-                            rel='noreferrer'
-                            className='hover:text-secondary transition-all duration-500'
+                            href="https://www.topuniversities.com/blog/working-while-you-study-common-student-jobs"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="hover:text-secondary transition-all duration-500"
                           >
                             2011 Student Jobs
                           </a>
                         </td>
-                      </tr>
-                      <tr className='text-2xl'>
-                        <td> &nbsp;</td>
-                      </tr>
-                      <tr className='text-2xl'>
-                        <td> &nbsp;</td>
-                      </tr>
-                      <tr className='md:text-2xl text-lg relative block'>
-                        <td className='absolute -left-10 w-10 h-[2px] top-[40%] bg-black'>
+                        <td className="absolute -left-10 w-10 h-[2px] top-[40%] bg-black">
                           &nbsp;
                         </td>
-                        <td className='pl-4'>
+                      </tr>
+
+                      <tr aria-hidden="true">
+                        <td className="md:h-8 h-6">&nbsp;</td>
+                      </tr>
+
+                      <tr aria-hidden="true">
+                        <td className="md:h-8 h-6">&nbsp;</td>
+                      </tr>
+
+                      <tr className="md:text-2xl text-lg relative">
+                        <td className="pl-4">
                           <a
-                            href='https://kiel.casino-sh.de/startseite.html'
-                            target='_blank'
-                            rel='noreferrer'
-                            className='hover:text-secondary transition-all duration-500'
+                            href="https://kiel.casino-sh.de/startseite.html"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="hover:text-secondary transition-all duration-500"
                           >
                             2017 Poker Dealer
                           </a>
                         </td>
-                      </tr>
-                      <tr className='md:text-2xl text-lg relative block'>
-                        <td className='absolute -left-10 w-10 h-[2px] top-[40%] bg-black'>
+                        <td className="absolute -left-10 w-10 h-[2px] top-[40%] bg-black">
                           &nbsp;
                         </td>
-                        <td className='pl-4'>
+                      </tr>
+
+                      <tr className="md:text-2xl text-lg relative">
+                        <td className="pl-4">
                           <a
-                            href='https://gsb.sh/'
-                            target='_blank'
-                            rel='noreferrer'
-                            className='hover:text-secondary transition-all duration-500'
+                            href="https://gsb.sh/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="hover:text-secondary transition-all duration-500"
                           >
                             2018 Geologist
                           </a>
                         </td>
-                      </tr>
-                      <tr className='text-2xl'>
-                        <td> &nbsp;</td>
-                      </tr>
-                      <tr className='md:text-2xl text-lg relative block'>
-                        <td className='absolute -left-10 w-10 h-[2px] top-[40%] bg-black'>
+                        <td className="absolute -left-10 w-10 h-[2px] top-[40%] bg-black">
                           &nbsp;
                         </td>
-                        <td className='pl-4'>
+                      </tr>
+
+                      <tr aria-hidden="true">
+                        <td className="md:h-8 h-6">&nbsp;</td>
+                      </tr>
+
+                      <tr className="md:text-2xl text-lg relative">
+                        <td className="pl-4">
                           <a
-                            href='https://de.restaurantguru.com/Maria-Bonita-Kiel'
-                            target='_blank'
-                            rel='noreferrer'
-                            className='hover:text-secondary transition-all duration-500'
+                            href="https://de.restaurantguru.com/Maria-Bonita-Kiel"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="hover:text-secondary transition-all duration-500"
                           >
                             2020 Cook
                           </a>
                         </td>
-                      </tr>
-                      <tr className='md:text-2xl text-lg relative block'>
-                        <td className='absolute -left-10 w-10 h-[2px] top-[40%] bg-black'>
+                        <td className="absolute -left-10 w-10 h-[2px] top-[40%] bg-black">
                           &nbsp;
                         </td>
-                        <td className='pl-4'>
+                      </tr>
+
+                      <tr className="md:text-2xl text-lg relative">
+                        <td className="pl-4">
                           <a
-                            href='https://networkteam.com/'
-                            target='_blank'
-                            rel='noreferrer'
-                            className='hover:text-secondary transition-all duration-500'
+                            href="https://networkteam.com/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="hover:text-secondary transition-all duration-500"
                           >
                             2021 Software Developer
                           </a>
                         </td>
-                      </tr>
-                      <tr className='text-2xl'>
-                        <td> &nbsp;</td>
-                      </tr>
-                      <tr className='md:text-2xl text-lg relative block'>
-                        <td className='absolute -left-10 w-10 h-[2px] top-[40%] bg-black'>
+                        <td className="absolute -left-10 w-10 h-[2px] top-[40%] bg-black">
                           &nbsp;
                         </td>
-                        <td className='pl-4'>
+                      </tr>
+
+                      <tr aria-hidden="true">
+                        <td className="md:h-8 h-6">&nbsp;</td>
+                      </tr>
+
+                    
+
+                      <tr className="md:text-2xl text-lg relative">
+                        <td className="pl-4">
                           <a
-                            href='https://www.kununu.com/de/appmatics'
-                            target='_blank'
-                            rel='noreferrer'
-                            className='hover:text-secondary transition-all duration-500'
+                            href="https://www.kununu.com/de/appmatics"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="hover:text-secondary transition-all duration-500"
                           >
                             2024 Test Automatization Engineer
                           </a>
                         </td>
-                      </tr>
-                       <tr className='md:text-2xl text-lg relative block'>
-                        <td className='absolute -left-10 w-10 h-[2px] top-[40%] bg-black'>
+                        <td className="absolute -left-10 w-10 h-[2px] top-[40%] bg-black">
                           &nbsp;
                         </td>
-                        <td className='pl-4'>
+                      </tr>
+
+                      <tr className="md:text-2xl text-lg relative">
+                        <td className="pl-4">
                           <a
-                            href='https://lebenszeitpflege.de/koeln-persoenliche-assistenz-assistenzpflege/'
-                            target='_blank'
-                            rel='noreferrer'
-                            className='hover:text-secondary transition-all duration-500'
+                            href="https://lebenszeitpflege.de/koeln-persoenliche-assistenz-assistenzpflege/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="hover:text-secondary transition-all duration-500"
                           >
                             2025 Personal Assistence
                           </a>
+                        </td>
+                        <td className="absolute -left-10 w-10 h-[2px] top-[40%] bg-black">
+                          &nbsp;
                         </td>
                       </tr>
                     </tbody>
